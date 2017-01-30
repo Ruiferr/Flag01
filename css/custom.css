@@ -1,0 +1,219 @@
+
+body{
+
+}
+
+header{
+	font-family: arial;
+	width: 100%;
+	min-height: 30px;
+	background-color: lightgrey;
+	display: none;
+}
+
+header a{
+	color: white;
+	cursor: pointer;
+	text-decoration: underline;
+
+}
+
+.welcome{
+	width: 70%;
+	height: 30px;
+	background-color: black;
+	float: left;
+}
+
+.welcome p{
+	color: white;
+	font-size: 15px;
+	margin: 7.5px 0 0 5px;
+}
+
+.contact{
+	width: 9.9%;
+	height: 30px;
+	margin-left: 0.1%;
+	background-color: black;
+	float: left;
+}
+
+.contact p{
+	color: white;
+	font-size: 15px;
+	margin: 7.5px 0 0 7px;
+	float: left;
+}
+
+.contact span{
+	font-size: 15px;
+	margin: 0 0 0 5px;
+
+}
+
+.login{
+	width: 9.9%;
+	height: 30px;
+	margin-left: 0.1%;
+	background-color: black;
+	float: left;
+}
+
+.login p{
+	color: white;
+	font-size: 15px;
+	margin: 7.5px 0 0 7px;
+	float: left;
+}
+
+.login span{
+	font-size: 15px;
+	margin: 0 0 0 5px;
+
+}
+
+.cart{
+	width: 9.9%;
+	height: 30px;
+	margin-left: 0.1%;
+	background-color: black;
+	float: left;
+}
+
+.cart p{
+	color: white;
+	font-size: 15px;
+	margin-top: 7.5px;
+	float: left;
+	margin-left: 5px;
+
+}
+
+.cart span{
+	font-size: 15px;
+	margin: 0 5px 0 7px;
+
+}
+
+.frame{
+	width: 90%;
+	min-height: 200px;
+	margin: 10% 5% 0 5%;
+	background: white;
+}
+
+.gamestore{
+	width: 70%;
+	min-height: 40px;
+	float: left;
+	display: none;
+
+}
+
+.gamestore p{
+	font-family: audi;
+	font-size: 40px;
+	font-weight: bold;
+	color: black;
+	margin: 5px 0 0 2%;
+
+}
+
+.gamestore span{
+	color: darkred;
+}
+
+.search{
+	width: 30%;
+	min-height: 45px;
+	float: left;
+	display: none;
+}
+
+.search input{
+	width: 78.5%;
+	margin: 7px 0 0 10px;
+	font-size: 20px;
+	float: left;
+}
+
+.search p{
+	margin: 12px 0 0 0;
+	float: left;
+}
+
+.line{
+	width: 96.8%;
+	height: 1.2px;
+	background: darkred;
+	margin: 0 1.6% 0 1.6%;
+	float: left;
+	display: none;
+
+}
+
+.destaqueLayout{
+	width: 100%;
+	float: left;
+
+}
+
+.destaque{
+	width: 30%;
+	height: 280px;
+	margin: 1.6%;
+	background-color: #eee;
+	float: left;
+	display: none;
+
+}
+
+.menu{
+	width: 100%;
+	min-height: 40px;
+	background: white;
+	float: left;
+	display: none;
+
+}
+
+.menu ul{
+	width: 100%;
+}
+
+
+.menu ul li{
+	width: 25%;
+	font-family: audi;
+	font-size: 15px;
+	font-weight: bold;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+
+}
+
+.menu ul li a{
+	text-decoration: none;
+	color: black;
+ 	transition: font-size 1s;
+	
+}
+
+.menu ul li a:hover{
+	color: darkred;
+	font-size: 18px;
+	
+	
+}
+
+.frame2{
+	width: 100%;
+	min-height: 1000px;
+	background: #eee;
+	float: left;
+	display: none;
+
+}
+
