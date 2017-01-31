@@ -1,14 +1,8 @@
-
-body{
-
-}
-
 header{
 	font-family: arial;
 	width: 100%;
 	min-height: 30px;
 	background-color: lightgrey;
-	display: none;
 }
 
 header a{
@@ -30,6 +24,7 @@ header a{
 	font-size: 15px;
 	margin: 7.5px 0 0 5px;
 }
+
 
 .contact{
 	width: 9.9%;
@@ -112,7 +107,6 @@ header a{
 	width: 70%;
 	min-height: 40px;
 	float: left;
-	display: none;
 
 }
 
@@ -133,7 +127,6 @@ header a{
 	width: 30%;
 	min-height: 45px;
 	float: left;
-	display: none;
 }
 
 .search input{
@@ -154,7 +147,6 @@ header a{
 	background: darkred;
 	margin: 0 1.6% 0 1.6%;
 	float: left;
-	display: none;
 
 }
 
@@ -164,32 +156,12 @@ header a{
 
 }
 
-.chevronRight{
-	background-color: #eee;
-	width: 3%;
-	height: 280px;
-	position: absolute;
-	margin: 1.5% 0 0 85.2%;
-	opacity: 0.4;
-	cursor: pointer;
-	display: none;
-}
-
-.chevronRight p{
-	color: black;
-	font-size: 30px;
-	text-align: center;
-	margin-top: 125px;
-	cursor: pointer;
-}
-
 .destaque{
-	width: 30%;
+	width: 96.5%;
 	height: 280px;
 	margin: 1.6%;
 	background-color: #eee;
 	float: left;
-	display: none;
 
 }
 
@@ -205,7 +177,6 @@ header a{
 	min-height: 50px;
 	background: white;
 	float: left;
-	display: none;
 
 }
 
@@ -247,105 +218,5 @@ header a{
 	min-height: 800px;
 	background: #eee;
 	float: left;
-	display: none;
 
-}
-
-aside{
-	width: 20%;
-	min-height: 800px;
-	background: #eee;
-	float: left; 
-}
-
-.gameLayout{
-	width: 80%;
-	min-height: 800px;
-	background: #eee;
-	margin-top: 5%;
-	float: left;
-}
-
-.game{
-	width: 22%;
-	height: 250px;
-	margin: 0.5%;
-	float: left;
-	background: white;
-	border-radius: 10px;
-}
-
-.game figure{
-	width: 100%;
-	height: 150px;
-	background: grey;
-	float: left;
-	border-radius: 10px 10px 0 0;
-	cursor: pointer;
-}
-
-figure img{
-	width: 100%;
-	height: 150px;
-	border-radius: 10px 10px 0 0;
-	overflow: hidden;
-}
-
-figcaption{
-	font-family: arial;
-	width: 88%;
-	height: 20px;
-	margin: 13px 0 0 6%;
-	font-weight: bold;
-	float: left;
-	cursor: pointer;
-}
-
-.game a{
-	text-decoration: none;
-	color: black;
-}
-
-.game p{
-	font-family: arial;
-	margin: 0 0 0 6%;
-
-}
-
-.game span{
-	font-family: arial;
-	font-weight: bold;
-}
-
-.line2{
-	width: 90%;
-	height: 1.2px;
-	background: darkred;
-	float: left;
-}
-
-.content ul{
-	font-family: arial;
-	margin: 30% 0 0 36%;
-
-}
-
-.content li{
-	font-family: arial;
-	font-size: 17px;
-	margin: 5% 0 7% 0;
-}
-
-
-.content input{
-	font-family: arial;
-	margin: 6%;
-}
-
-footer{
-	width: 100%;
-	height: 200px;
-	background-color: grey;
-	float: left;
-	display: none;
 }
