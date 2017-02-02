@@ -41,9 +41,11 @@ header a{
 	float: left;
 }
 
-.contact span{
+.contact i{
+	color: white;
 	font-size: 15px;
-	margin: 0 0 0 5px;
+	margin: 7.5px 0 0 12px;
+	float: left;
 	cursor: pointer;
 }
 
@@ -62,9 +64,11 @@ header a{
 	float: left;
 }
 
-.login span{
+.login i{
+	color: white;
 	font-size: 15px;
-	margin: 0 0 0 5px;
+	margin: 7.5px 0 0 12px;
+	float: left;
 	cursor: pointer;
 }
 
@@ -85,9 +89,10 @@ header a{
 
 }
 
-.cart span{
+.cart i{
 	font-size: 15px;
-	margin: 0 5px 0 7px;
+	margin: 7.5px 10px 0 7px;
+	float: left;
 	cursor: pointer;
 }
 
@@ -156,8 +161,27 @@ header a{
 
 }
 
+.chevronRight{
+	background-color: #eee;
+	width: 3%;
+	height: 280px;
+	position: absolute;
+	margin: 1.5% 0 0 85.2%;
+	opacity: 0.4;
+	cursor: pointer;
+	display: none;
+}
+
+.chevronRight p{
+	color: black;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 125px;
+	cursor: pointer;
+}
+
 .destaque{
-	width: 96.5%;
+	width: 30%;
 	height: 280px;
 	margin: 1.6%;
 	background-color: #eee;
@@ -169,9 +193,8 @@ header a{
 	width: 100%;
 	height: 280px;
 	overflow: hidden;
-	border-radius: 3px;
+	border-radius: 5px;
 }
-
 .menu{
 	width: 100%;
 	min-height: 50px;
@@ -215,94 +238,151 @@ header a{
 
 .frame2{
 	width: 100%;
-	min-height: 800px;
+	min-height: 600px;
 	background: #eee;
 	float: left;
 
 }
 
-.gameOverview{
-	width: 87%;
-	margin: 2% 6.5% 0 6.5%;
-	min-height: 400px;
+.newAcc{
+	width: 100%;
+	margin: 3% 0 2% 7%;
 }
 
-.gameName{
-	width: 50%;
-	min-height: 100px;
+.newAcc h2{
+	font-family: gotham;
+	font-size: 30px;
+}
+
+.steps{
+	width: 92.8%;
+	min-height: 50px;
+	margin-left: 7.2%;
+
+}
+
+.steps ul li{
+	font-family: gotham;
+	margin-right: 3%;
 	float: left;
 }
 
-.gameName h2{
-	font-size: 30px;
-	font-family: gotham;
-	margin: 5% 0 1% 2%;
-
-}
-
-.gameName h3{
-	font-size: 20px;
+.steps #active{
+	color: #00d5bc;
 	font-family: gothamBold;
-	margin: 1% 0 1% 2%;
+
 }
 
-.gameBuy{
+.createAcc{
 	width: 50%;
-	min-height: 100px;
+	min-height: 600px;
+	margin-left: 25%;
 	float: left;
 }
 
-.gameBuy span{
-	font-size: 30px;
+fieldset{
 	font-family: gotham;
+	margin: 2% 0 0 3%; 
 }
 
-.gameBuy p{
-	font-size: 17px;
-	font-family: gotham;
-	margin: 5% 0 0 50%;
+fieldset p{
+	font-family: gothamBold;
+	font-size: 16px;
+	margin: 2% 2% 3% 2%;
+}
+fieldset ul{
+	margin: 2% 0 2% 5%; 
+}
+fieldset li{
+	float: left;
+	width: 97%;
+	margin: 1.5%;
 }
 
-.gameBuy button{
+fieldset label{
+	width: 25%;
+	font-size: 14px;
+	display: block;
+	float: left;
+	text-align: right;
+
+}
+
+fieldset input{
+	margin-left: 5%;
+	float: left;
+	border-radius: 5px;
+	border-style: none;
+	font-size: 14px;
+}
+
+fieldset .next{
 	width: 15%;
 	font-size: 16px;
-	font-family: gotham;
-	float: left;
-	margin: -5.5% 0 0 79%;
+	font-family: gothamBold;
+	margin: 7% 0 0 36%;
 	background: #00d5bc;
-	border-style: none;
+	color: white;
+	float: left;
+	padding: 1.5%;
 	border-radius: 5px;
+	border-style: none;
+}
+
+#basicForm{
+}
+
+#paymentForm{
+	display: none;
+}
+
+.lastStep{
+	display: none;
+}
+
+.createAcc .lastStep{
+	border-radius: 20px;
+	background: white;
+	padding: 5%;
+}
+
+.lastStep i{
+	font-size: 700%;
+	margin: 5% 0 5% 40%;
+	color: lightgreen;
+	text-align: center;
+}
+
+.lastStep p{
+	font-family: gotham;
+	text-align: justify;
+	font-size: 30px;
+}
+
+.lastStep p span{
+	text-align: justify;
+	font-size: 13px;
+	font-family: gothambold;
+}
+
+
+.lastStep #finish{
+	width: 19%;
+	font-size: 16px;
+	font-family: gothamBold;
+	margin: 7% 0 0 40%;
+	background: #00d5bc;
+	color: white;
+	float: left;
+	padding: 1.5%;
+	border-radius: 5px;
+	border-style: none;
+}
+
+button a{
+	text-decoration: none;
 	color: white;
 }
 
-.images{
-	width: 50%;
-	min-height: 300px;
-	float: left;
-}
 
-article{
-	width: 50%;
-	min-height: 325px;
-	float: left;
-}
 
-article p{
-	width: 90%;
-	margin: 2% 0 0 5%;
-	font-family: gotham;
-	font-size: 20px;
-	text-align: justify;
-}
-
-.images figure{
-	width: 48%;
-	margin: 1%;
-	min-height: 150px;
-	float: left;
-}
-
-.images figure img{
-	width: 100%;
-	min-height: 170px;
-}

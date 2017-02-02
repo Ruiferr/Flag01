@@ -4,7 +4,7 @@ body{
 }
 
 header{
-	font-family: arial;
+	font-family: gotham;
 	width: 100%;
 	min-height: 30px;
 	background-color: lightgrey;
@@ -31,6 +31,7 @@ header a{
 	margin: 7.5px 0 0 5px;
 }
 
+
 .contact{
 	width: 9.9%;
 	height: 30px;
@@ -46,9 +47,11 @@ header a{
 	float: left;
 }
 
-.contact span{
+.contact i{
+	color: white;
 	font-size: 15px;
-	margin: 0 0 0 5px;
+	margin: 7.5px 0 0 12px;
+	float: left;
 	cursor: pointer;
 }
 
@@ -67,9 +70,11 @@ header a{
 	float: left;
 }
 
-.login span{
+.login i{
+	color: white;
 	font-size: 15px;
-	margin: 0 0 0 5px;
+	margin: 7.5px 0 0 12px;
+	float: left;
 	cursor: pointer;
 }
 
@@ -90,9 +95,11 @@ header a{
 
 }
 
-.cart span{
+.cart i{
 	font-size: 15px;
-	margin: 0 5px 0 7px;
+	margin: 7.5px 10px 0 7px;
+	color: white;
+	float: left;
 	cursor: pointer;
 }
 
@@ -197,7 +204,7 @@ header a{
 	width: 100%;
 	height: 280px;
 	overflow: hidden;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 
 .menu{
@@ -210,14 +217,13 @@ header a{
 }
 
 .menu ul{
-	width: 80%;
-	margin-left: 10%;
+	width: 70%;
+	margin: 1.3% 0 0 15%;
 }
 
 
 .menu ul li{
 	width: 25%;
-	margin-top: 1.3%;
 	font-family: audi;
 	font-size: 15px;
 	font-weight: bold;
@@ -292,11 +298,10 @@ figure img{
 }
 
 figcaption{
-	font-family: arial;
+	font-family: gothamBold;
 	width: 88%;
 	height: 20px;
 	margin: 13px 0 0 6%;
-	font-weight: bold;
 	float: left;
 	cursor: pointer;
 }
@@ -307,13 +312,13 @@ figcaption{
 }
 
 .game p{
-	font-family: arial;
+	font-family: gotham;
 	margin: 0 0 0 6%;
 
 }
 
 .game span{
-	font-family: arial;
+	font-family: gothamBold;
 	font-weight: bold;
 }
 
@@ -325,22 +330,23 @@ figcaption{
 }
 
 .content ul{
-	font-family: arial;
+	font-family: gotham;
 	margin: 30% 0 0 36%;
 
 }
 
 .content li{
-	font-family: arial;
+	font-family: gothamBold;
 	font-size: 17px;
 	margin: 5% 0 7% 0;
 }
 
 
 .content input{
-	font-family: arial;
+	font-family: gotham;
 	margin: 6%;
 }
+
 
 footer{
 	width: 100%;

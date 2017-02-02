@@ -1,16 +1,6 @@
 $(document).ready(function(){
-	$('.search').fadeIn(4000);
-	$('.gamestore').fadeIn(4000);
-	$('header').fadeIn(1500);
-	$('.line').animate({width:'toggle'},2000, function(){
-		$('.destaque').fadeIn(800);
-		$('.frame2').fadeIn(800);
-		$('.menu').fadeIn(800);
-		$('footer').fadeIn(800);
-	});
 
 	//Imagens de destaque aleatórias
-
 
 	var images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
 	
@@ -46,7 +36,35 @@ $(document).ready(function(){
 
 	});
 
-	
+	$('#next').click(function(){
 
+		if($('#name').val()!=''){
+			$('#basicForm').fadeOut(1000, function(){
+				$('#paymentForm').fadeIn(1000);
+				$('#active').css({'color': 'black', 'font-family': 'gotham'});
+				$('#active2').css({'color': '#00d5bc', 'font-family': 'gothamBold'});
+				$('.login p').fadeOut(1000);
+				$('.login').append("<p>User001</p>");
+			});
+		} else {
+			alert('preenche todos os campos!');
+		}
+	});
+
+	$('#next2').click(function(){
+		$('#paymentForm').fadeOut(1000, function(){
+			$('.lastStep').fadeIn(1000);
+			$('#active2').css({'color': 'black', 'font-family': 'gotham'});
+			$('#active3').css({'color': '#00d5bc', 'font-family': 'gothamBold'});
+		})
+	});
+
+	$('#finish').click(function(){
+	});
 
 });
+
+
+
+
+
