@@ -17,16 +17,28 @@
 				</div>
 				<div class="contact">
 					<i class="fa fa-phone" aria-hidden="true"></i>
-					<p><a href="#">Contact us</a></p>
+					<p><a href="contacts.html">Contact us</a></p>
 				</div>
 				<div class="login">
-					<a href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i></a>					<p> User <a href="login.html">Login</a></p>
+					<i class="fa fa-sign-in" aria-hidden="true"></i>
+					<p> User Login</p>
 				</div>
 				<div class="cart">
 					<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-					<p><a href="#">Cart</a> 0 €</p>
+					<p><a href="cart.html">Cart</a> <span>0<span> </p>
 				</div>
 		</header>
+		<div class="loginWindow">
+			<p>User name</p><input type="text" name="">
+			<p>Password</p><input type="password" name="">
+			<button id="login">Login</button>
+			<p id="createAcc">Create your account <a href="login.html">here</a></p>
+		</div>
+		<div class="profileWindow">
+			<p>Profile</p><br>
+			<p id="logout">Logout</p>
+			
+		</div>
 		<div class="frame">
 				<div class="gamestore">
 					<a href="index.html"><p><span>GAME</span>STORE</p></a>
@@ -52,10 +64,10 @@
 			</div>
 			<nav class="menu">
 				<ul>
-					<li><a href="#">LATEST</a></li>
-					<li><a href="#">BESTSELLERS</a></li>
-					<li><a href="#">SYSTEMS</a></li>
-					<li><a href="#">COMING SOON</a></li>
+					<li class="nav" id="nav1">GAMES</li>
+					<li class="nav" id="nav2">LATEST</li>
+					<li class="nav" id="nav3">BESTSELLERS</li>
+					<li class="nav" id="nav4">SYSTEMS</li>
 				</ul>
 			</nav>
 		</div>
@@ -66,102 +78,108 @@
 						<ul>
 							<li>Price</li>
 							<div class="line2"></div>
-								<input type="checkbox" name="price" value="price"> up to 20 €<br>
-								<input type="checkbox" name="price" value="price2"> 20 € - 45 €<br>
-								<input type="checkbox" name="price" value="price3"> 45 € - 100 €<br>
+								<input class="filterGroup1"  id="group-1" type="checkbox" name="filter" value="price"> up to 20 €<br>
+								<input class="filterGroup2"  id="group-2"  type="checkbox" name="filter" value="price2"> 20 € - 45 €<br>
+								<input class="filterGroup3"  id="group-3"  type="checkbox" name="filter" value="price3"> 45 € - 100 €<br>
 							<li>Platform</li>
 							<div class="line2"></div>
-								<input type="checkbox" name="ps4" value="plataforma"> Playstation 4<br>
-								<input type="checkbox" name="ps3" value="plataforma2"> Playstation 3<br>
-								<input type="checkbox" name="xbox1" value="plataforma3"> Xbox One<br>
-								<input type="checkbox" name="xbox360" value="plataforma4"> Xbox 360<br>
-								<input type="checkbox" name="pc" value="plataforma5"> Pc<br>
+								<input class="filterGroup4"  id="group-4"  type="checkbox" name="filter" value="plataforma1"> Playstation 4<br>
+								<input class="filterGroup5"  id="group-5"  type="checkbox" name="filter" value="plataforma2"> Xbox One<br>
+								<input class="filterGroup6"  id="group-6"  type="checkbox" name="filter" value="plataforma3"> Nitendo<br>
+								<input class="filterGroup7"  id="group-7"  type="checkbox" name="filter" value="plataforma4"> Pc<br>
 							<li>Genre</li>
 							<div class="line2"></div>
-								<input type="checkbox" name="arcade" value="genre"> Arcade<br>
-								<input type="checkbox" name="sports" value="genre1"> Sports<br>
-								<input type="checkbox" name="sci-fi" value="genre2"> Sci-fi<br>
-								<input type="checkbox" name="fantasy" value="genre3"> Fantasy<br>
-								<input type="checkbox" name="action" value="genre4"> Action<br>
+								<input class="filterGroup8"  id="group-8"  type="checkbox" name="filter" value="genre1"> RPG<br>
+								<input class="filterGroup9"  id="group-9"  type="checkbox" name="filter" value="genre2"> Sports<br>
+								<input class="filterGroup10"  id="group-10"  type="checkbox" name="filter" value="genre3"> Adventure<br>
+								<input class="filterGroup11"  id="group-11"  type="checkbox" name="filter" value="genre4"> Fantasy<br>
+								<input class="filterGroup12"  id="group-12"  type="checkbox" name="filter" value="genre5"> Action<br>
+								<input class="filterGroup13"  id="group-13"  type="checkbox" name="filter" value="genre6"> FPS<br>
 
 						</ul>
 					</nav>
 				</aside>
 				<div class="gameLayout">
-					<section class="game">
+					<section class="game group-3 group-4 group-12" id="1">
 						<figure><a href="game.html"><img src="img/gta52.jpg"></a></figure>
 							<figcaption><a href="game.html">Grand Theft Auto V</a></figcaption>
 								<p>PS4/Action<br>
-								<br><span>59.99 €<span></p>
+								<br><span>59.99 €<span> <button>+Add Cart</button></p>
 					</section>
-					<section class="game">
-						<figure><img src=""></figure>
-							<figcaption></figcaption>
-								<p><br>
-								<br><span><span></p>
+					<section class="game group-2 group-4 group-10 group-12">
+						<figure><img src="img/farcry.jpg"></figure>
+							<figcaption>Far Cry Primal</figcaption>
+								<p>PS4/Action-Adventure<br>
+								<br><span>29.99 €<span> <button>+Add Cart</button></p>
 					</section>
-					<section class="game">
-						<figure><img src=""></figure>
-							<figcaption></figcaption>
-								<p><br>
-								<br><span><span></p>
+					<section class="game group-1 group-7 group-12 group-13">
+						<figure><img src="img/h1z1.jpg"></figure>
+							<figcaption>H1Z1: King of the Kill</figcaption>
+								<p>PC/FPS-Action<br>
+								<br><span>19.99 € <span> <button>+Add Cart</button></p>
 					</section>
-					<section class="game">
-						<figure><img src=""></figure>
-							<figcaption></figcaption>
-								<p><br>
-								<br><span><span></p>
+					<section class="game group-3 group-5 group-9" id="4">
+						<figure><img src="img/forza.jpg"></figure>
+							<figcaption>Forza Horizon 3</figcaption>
+								<p>Xbox One/Sports-Racing<br>
+								<br><span>69.99 €<span> <button>+Add Cart</button></p>
 					</section>
-					<section class="game">
-						<figure><img src=""></figure>
-							<figcaption></figcaption>
-								<p><br>
-								<br><span><span></p>
+					<section class="game group-3 group-7 group-10 group-12">
+						<figure><img src="img/watchDogs.png"></figure>
+							<figcaption>Watch Dogs 2</figcaption>
+								<p>PC/Action-Adventure<br>
+								<br><span>69.99 €<span> <button>+Add Cart</button></p>
 					</section>
-					<section class="game">
-						<figure><img src=""></figure>
-							<figcaption></figcaption>
-								<p><br>
-								<br><span><span></p>
+					<section class="game group-3 group-7 group-8 group-12">
+						<figure><img src="img/fallout.png"></figure>
+							<figcaption>Fallout 4</figcaption>
+								<p>PC/RPG-Action<br>
+								<br><span>49.99 €<span> <button>+Add Cart</button></p>
 					</section>
-					<section class="game">
-						<figure><img src=""></figure>
-							<figcaption></figcaption>
-								<p><br>
-								<br><span><span></p>
+					<section class="game group-2 group-7 group-8">
+						<figure><img src="img/witcher.jpg"></figure>
+							<figcaption>The Witcher 3: Wild Hunt</figcaption>
+								<p>PC/RPG<br>
+								<br><span>42.99 €<span> <button>+Add Cart</button></p>
 					</section>
-					<section class="game">
-						<figure><img src=""></figure>
-							<figcaption></figcaption>
-								<p><br>
-								<br><span><span></p>
+					<section class="game group-2 group-4 group-8 group-12">
+						<figure><img src="img/destiny.jpg"></figure>
+							<figcaption>Destiny</figcaption>
+								<p>PS4/RPG-Action<br>
+								<br><span>34.99 €<span> <button>+Add Cart</button></p>
 					</section>
-					<section class="game">
-						<figure><img src=""></figure>
-							<figcaption></figcaption>
-								<p><br>
-								<br><span><span></p>
+					<section class="game group-3 group-5 group-9">
+						<figure><img src="img/fifa.jpg"></figure>
+							<figcaption>FIFA 16</figcaption>
+								<p>Xbox One/Sports<br>
+								<br><span>54.99 €<span> <button>+Add Cart</button></p>
 					</section>
-					<section class="game">
-						<figure><img src=""></figure>
-							<figcaption></figcaption>
-								<p><br>
-								<br><span><span></p>
+					<section class="game group-3 group-6 group-8 group-11">
+						<figure><img src="img/zelda.jpg"></figure>
+							<figcaption>Zelda: Breath of the Wild</figcaption>
+								<p>Nitendo Switch/RPG-Fantasy<br>
+								<br><span>69.99€<span> <button>+Add Cart</button></p>
 					</section>
-					<section class="game">
-						<figure><img src=""></figure>
-							<figcaption></figcaption>
-								<p><br>
-								<br><span><span></p>
+					<section class="game group-2 group-5 group-13">
+						<figure><img src="img/overwatch.jpg"></figure>
+							<figcaption>Overwatch</figcaption>
+								<p>Xbox One/FPS<br>
+								<br><span>39.99€<span> <button>+Add Cart</button></p>
 					</section>
-					<section class="game">
-						<figure><img src=""></figure>
-							<figcaption></figcaption>
-								<p><br>
-								<br><span><span></p>
+					<section class="game group-3 group-4 group-10 group-12">
+						<figure><img src="img/uncharted.jpg"></figure>
+							<figcaption>Uncharted 4: A Thief's End</figcaption>
+								<p>PS4/Action-Adventure<br>
+								<br><span>54.99€<span> <button>+Add Cart</button></p>
 					</section>
 				</div>
 			</div>
+		</div>
+		<div class="frame3">
+			<div class="latest">
+				
+			</div>
+			
 		</div>	
 		<footer>
 			

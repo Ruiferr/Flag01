@@ -1,6 +1,8 @@
 $(document).ready(function(){
+	$('#nav1').addClass('active');
 
 	//Imagens de destaque aleatórias
+
 
 	var images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
 	
@@ -36,35 +38,48 @@ $(document).ready(function(){
 
 	});
 
-	$('#next').click(function(){
 
-		if($('#name').val()!=''){
-			$('#basicForm').fadeOut(1000, function(){
-				$('#paymentForm').fadeIn(1000);
-				$('#active').css({'color': 'black', 'font-family': 'gotham'});
-				$('#active2').css({'color': '#00d5bc', 'font-family': 'gothamBold'});
-				$('.login p').fadeOut(1000);
-				$('.login').append("<p>User001</p>");
-			});
-		} else {
-			alert('preenche todos os campos!');
-		}
-	});
+   	$('.login').click(function(){
+   		if ($('.loginWindow').css('display') == 'none' && $("p").length == '24'){
+ 			$('.loginWindow').fadeIn(1000);
+   		}else{
+   			$('.loginWindow').hide()
+   		}  
 
-	$('#next2').click(function(){
-		$('#paymentForm').fadeOut(1000, function(){
-			$('.lastStep').fadeIn(1000);
-			$('#active2').css({'color': 'black', 'font-family': 'gotham'});
-			$('#active3').css({'color': '#00d5bc', 'font-family': 'gothamBold'});
-		})
-	});
+   		if ($('.profileWindow').css('display') == 'none' && $("p").length == '25' ) {
+  			$('.profileWindow').fadeIn(1000);
+   		}else{
+   			$('.profileWindow').hide()
+   		}    			
 
-	$('#finish').click(function(){
-	});
+   	});
+
+
+   	$('#login').click(function(){
+  		$('.login p').fadeOut(1000);
+  		$('.login').append("<p>User001</p>");
+		$('.loginWindow').hide()
+   	});
+
+   	$('#logout').click(function(){
+   		$('.login p').fadeOut(1000);
+		$('.login').append("<p>User Login</p>");
+		$('.profileWindow').hide()
+   	})
+
+	
+   	$('.nav').click(function(){
+   		$('.nav').removeClass('active');
+		$(this).addClass('active');
+   	});
+
+
+
+    //FILTER GAMES
+
+
+
+
+
 
 });
-
-
-
-
-

@@ -1,0 +1,239 @@
+body{
+	background: white;
+}
+header{
+	font-family: gotham;
+	width: 100%;
+	min-height: 30px;
+	position: fixed;
+	top: 0%;
+	z-index: 10000;
+}
+
+header a{
+	color: white;
+	cursor: pointer;
+	text-decoration: underline;
+
+}
+
+.welcome{
+	width: 70%;
+	height: 30px;
+	background-color: black;
+	float: left;
+
+}
+
+.welcome p{
+	color: white;
+	font-size: 15px;
+	margin: 7.5px 0 0 5px;
+}
+
+
+.contact{
+	width: 9.9%;
+	height: 30px;
+	margin-left: 0.1%;
+	background: darkred;
+	float: left;
+
+}
+
+.contact p{
+	color: white;
+	font-size: 15px;
+	margin: 7.5px 0 0 7px;
+	float: left;
+
+}
+
+.contact i{
+	color: white;
+	font-size: 15px;
+	margin: 7.5px 0 0 12px;
+	float: left;
+	cursor: pointer;
+}
+
+.login{
+	width: 9.9%;
+	height: 30px;
+	margin-left: 0.1%;
+	background-color: black;
+	float: left;
+	cursor: pointer;
+}
+
+.login p{
+	color: white;
+	font-size: 15px;
+	margin: 7.5px 0 0 7px;
+	float: left;
+	text-decoration: underline;
+}
+
+.login i{
+	color: white;
+	font-size: 15px;
+	margin: 7.5px 0 0 12px;
+	float: left;
+}
+
+.cart{
+	width: 9.9%;
+	height: 30px;
+	margin-left: 0.1%;
+	background-color: black;
+	float: left;
+}
+
+.cart p{
+	color: white;
+	font-size: 15px;
+	margin-top: 7.5px;
+	float: left;
+	margin-left: 5px;
+
+}
+
+.cart i{
+	font-size: 15px;
+	margin: 7.5px 10px 0 7px;
+	color: white;
+	float: left;
+	cursor: pointer;
+}
+
+.frame{
+	width: 90%;
+	min-height: 1100px;
+	margin: 7% 5% 0 5%;
+	background: white;
+}
+
+
+.loginWindow{
+	width: 40%;
+	position: fixed;
+	min-height: 50px;
+	margin: 0 0 0 60%;
+	font-family: gotham;
+	font-size: 15px;
+	background: darkred;
+	opacity: 0.9;
+	color: white;
+	display: none;
+	border-radius: 0 0 0 20px;
+	top: 30px;
+
+}
+
+.loginWindow button{
+	border-style: none;
+	background: #eee;
+	margin: 1%;
+	float: left;
+
+}
+
+.loginWindow input{
+	width: 20%;
+	float: left;
+	margin: 1%;
+}
+
+.loginWindow p{
+	width: 15%;
+	float: left;
+	margin: 1%;
+}
+
+.loginWindow #createAcc{
+	float: left;
+	width: 100%;
+	margin: 1%;
+}
+
+.loginWindow a{
+	color: yellow;
+}
+
+.profileWindow{
+	width: 10%;
+	position: absolute;
+	min-height: 50px;
+	margin: 0 0 0 80%;
+	font-family: gotham;
+	font-size: 15px;
+	background: black;
+	color: white;
+	border-radius: 0 0 0 10px;
+	display: none;
+	position: fixed;
+	top: 30px;
+}
+
+.profileWindow p{
+	padding: 5% 0 3% 24%;
+	cursor: pointer;
+}
+
+.profileWindow p:hover{
+	background: darkred;
+	border-radius: 0 0 0 10px;
+}
+
+
+.gamestore a{
+	text-decoration: none;
+	color: black;
+}
+
+.gamestore{
+	width: 70%;
+	min-height: 40px;
+	float: left;
+
+}
+
+.gamestore p{
+	font-family: audi;
+	font-size: 40px;
+	font-weight: bold;
+	color: black;
+	margin: 5px 0 0 2%;
+
+}
+
+.gamestore span{
+	color: darkred;
+}
+
+.search{
+	width: 30%;
+	min-height: 45px;
+	float: left;
+}
+
+.search input{
+	width: 78.5%;
+	margin: 8px 0 0 10px;
+	font-size: 20px;
+	float: left;
+}
+
+.search p{
+	margin: 12px 0 0 0;
+	float: left;
+}
+
+.line{
+	width: 96.4%;
+	height: 1.2px;
+	background: darkred;
+	margin: 0 1.6% 0 1.6%;
+	float: left;
+
+}
