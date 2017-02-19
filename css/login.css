@@ -322,6 +322,11 @@ fieldset input{
 	font-size: 14px;
 }
 
+fieldset select{
+	margin-left: 5%;
+    min-width: 23%;
+}
+
 fieldset .next{
 	width: 15%;
 	font-size: 16px;

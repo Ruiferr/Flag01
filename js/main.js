@@ -81,10 +81,41 @@ $(document).ready(function(){
 		val = 0
    	})
 
-	
+
+	// NAV BAR
+
    	$('.nav').click(function(){
    		$('.nav').removeClass('active');
 		$(this).addClass('active');
+   	});
+
+   	$('#nav4').click(function(){
+   		$('.bestsellerFrame').hide();
+   		$('.gamesFrame').hide();
+   		$('.latestFrame').hide();
+   		$('.systemFrame').fadeIn(500);
+   	});
+
+   	$('#nav3').click(function(){
+   		$('.systemFrame').hide();
+   		$('.gamesFrame').hide();
+   		$('.latestFrame').hide();
+   		$('.bestsellerFrame').fadeIn(500);
+   	});
+
+   	$('#nav2').click(function(){
+   		$('.systemFrame').hide();
+   		$('.gamesFrame').hide();
+   		$('.bestsellerFrame').hide();
+   		$('.latestFrame').fadeIn(500);
+
+   	});
+
+   	$('#nav1').click(function(){
+   		$('.systemFrame').hide();
+   		$('.bestsellerFrame').hide();
+   		$('.latestFrame').hide();
+   		$('.gamesFrame').fadeIn(500);
    	});
 
 
@@ -119,7 +150,7 @@ $(document).ready(function(){
 	// CART SELECTION
 
 	var contador = 0
-	$('.game button').click(function(){
+	$('.cartButton').click(function(){
 		if ($(this).css('background-color') == 'rgb(76, 175, 80)') {
 			var subtrair = parseInt(contador) - 1;
 			$(this).css('background', 'white');
@@ -138,6 +169,127 @@ $(document).ready(function(){
 			}
 	}); 
 
+	// GALERIA LATEST
+
+	$('.bottomGame').mouseenter(function(){
+		$('.bottomGame aside').stop().slideDown(1000);
+		$('.bottomGame article').stop().slideDown(1000);
+	});
+
+	$('.bottomGame').mouseleave(function(){
+		$('.bottomGame aside').stop().slideUp(1000);
+		$('.bottomGame article').stop().slideUp(1000);
+	});
+
+	// READ ME BUTTON (SYSTEM SECTION)
+
+
+	$('.productFrame .readButton').click(function(){
+		var button = '#' + $(this).attr('id');
+		var prodNumber = $(this).attr('id');
+		var border = '.' + 'prod' + prodNumber;
+		var article = '.' + $(this).attr('id');
+
+
+		if ($(button).css('background-color') == 'rgb(238, 238, 238)'){
+			$(button).css('background-color', 'rgb(55, 145, 202)');
+			$(button).css('color', 'rgb(238, 238, 238)');
+			$(border).css('border-bottom', 'none');
+			$(border).css('border-bottom', 'none');
+			$(article).slideDown(1000);
+		} else {
+				$(article).slideUp(1000, function(){
+					$(button).css('background-color', 'rgb(238, 238, 238)');
+					$(button).css('color', 'rgb(55, 145, 202)');
+					$(border).css('border-bottom', '1px solid rgba(139, 0, 0, 0.317647)');
+					$(border).css('border-bottom', '1px solid rgba(139, 0, 0, 0.317647)');					
+				});
+			}
+	});
 });
 
+
+// BESTSELLER SELECTION
+
+function select(){		
+	var selection = document.getElementById('option').value;
+
+	switch(selection){
+		case 'pc' : { 
+			 $('.group2').fadeIn(1000); 
+			 $('.group1').hide(); 
+			 $('.group3').hide();
+		} break;
+		case 'ps4' : { 
+			 $('.group1').fadeIn(1000); 
+			 $('.group2').hide(); 
+			 $('.group3').hide();
+		} break;
+		case 'xbox' : {
+			 $('.group3').fadeIn(1000); 
+			 $('.group1').hide(); 
+			 $('.group2').hide();
+		} break;
+	}
+}
+
+// SYSTEM SELECTION
+
+function select2(){		
+	var selection = document.getElementById('option2').value;
+
+	switch(selection){
+		case 'all' : { 
+			 $('.group5').fadeIn(1000); 
+			 $('.group6').fadeIn(1000); 
+			 $('.group7').fadeIn(1000); 
+			 $('.group8').fadeIn(1000); 
+		} break;		
+		case 'ps4' : { 
+			 $('.group5').fadeIn(1000); 
+			 $('.group8').hide(); 
+			 $('.group85').fadeIn(1000);
+			 $('.group6').hide(); 
+			 $('.group7').hide(); 
+		} break;
+		case 'xbox' : { 
+			 $('.group6').fadeIn(1000); 
+			 $('.group8').hide(); 
+			 $('.group86').fadeIn(1000);
+			 $('.group5').hide(); 
+			 $('.group7').hide(); 
+		} break;
+		case 'nitendo' : { 
+			 $('.group7').fadeIn(1000); 
+			 $('.group5').hide(); 
+			 $('.group6').hide();
+			 $('.group8').hide();
+		} break;
+		case 'accessories' : {
+			 $('.group8').fadeIn(1000); 
+			 $('.group5').hide(); 
+			 $('.group6').hide();
+			 $('.group7').hide();
+		} break;
+	}
+}
+
+function select3(){
+	var selection = document.getElementById('option3').value;
+
+		switch(selection){
+		case 'all2' : {
+			 $('.group9').fadeIn(1000); 
+			 $('.group10').fadeIn(1000); 
+		} break;
+		case 'desk' : {
+			 $('.group9').fadeIn(1000); 
+			 $('.group10').hide(); 
+		} break;
+		case 'port' : {
+			 $('.group10').fadeIn(1000); 
+			 $('.group9').hide(); 
+		} break;
+	}
+}
 

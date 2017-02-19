@@ -7,7 +7,7 @@ $(document).ready(function(){
 	});
 	
 
-	// QUANTITY SELECTOR CART
+	// QUANTITY CART SELECTOR
 
 	var registaValor = 0
 	$('.qty input').click(function(){
@@ -138,15 +138,6 @@ $(document).ready(function(){
    	})
 
 	
-   	$('.nav').click(function(){
-   		$('.nav').removeClass('active');
-		$(this).addClass('active');
-   	});
-
-
-   	// FREE DELIVERY
-
-
 
 });
 

@@ -108,7 +108,7 @@ header a{
 
 .frame{
 	width: 90%;
-	min-height: 1100px;
+	min-height: 800px;
 	margin: 7% 5% 0 5%;
 	background: white;
 }
@@ -127,6 +127,7 @@ header a{
 	display: none;
 	border-radius: 0 0 0 20px;
 	top: 30px;
+	z-index: 10000;
 
 }
 
@@ -173,6 +174,8 @@ header a{
 	display: none;
 	position: fixed;
 	top: 30px;
+	z-index: 10000;
+	
 }
 
 .profileWindow p{
@@ -211,24 +214,6 @@ header a{
 	color: darkred;
 }
 
-.search{
-	width: 30%;
-	min-height: 45px;
-	float: left;
-}
-
-.search input{
-	width: 78.5%;
-	margin: 8px 0 0 10px;
-	font-size: 20px;
-	float: left;
-}
-
-.search p{
-	margin: 12px 0 0 0;
-	float: left;
-}
-
 .line{
 	width: 96.4%;
 	height: 1.2px;
@@ -237,3 +222,125 @@ header a{
 	float: left;
 
 }
+
+.mapFrame{
+	width: 55%;
+	min-height: 100px;
+	background: white;
+	margin: 3% 0 2% 1.6%;
+	float: left;
+
+}
+
+.map2{
+	display: none;
+}
+
+.map3{
+	display: none;
+}
+
+aside{
+	width: 40%;
+    min-height: 200px;
+    background: white;
+    margin: 3% 1.6% 0 1%;
+    float: left;
+}
+
+aside h2{
+	width: 100%;
+    font-family: gothamBold;
+    float: left;
+    margin: 5% 0 2% 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+aside p{
+	width: 100%;
+	text-align: center;
+    float: left;
+    font-family: gotham;
+    font-size: 10px;
+}
+
+aside table{
+	width: 70%;
+	margin: 5% 0 5% 20%;
+	text-align: center;
+}
+
+aside th{
+	padding-bottom: 5%;
+}
+
+aside td{
+	font-family: gotham;
+	border-bottom: 1px solid grey;
+	padding: 5%;
+	text-align: center;
+}
+
+aside table .special{
+	text-align: left;
+	cursor: pointer;
+}
+
+table td i{
+	color: darkred;
+	cursor: pointer;
+}
+
+footer{
+	width: 95%;
+	margin: 0 1.6% 0 1.6%;
+	min-height: 100px;
+	float: left;
+	background: white;
+}
+.shop{
+    width: 31%;
+    height: 200px;
+    background: white;
+    margin: 1%;
+    float: left;
+    cursor: pointer;
+   	font-family: gotham;
+}
+
+.shop table .nomeLoja{
+	border-bottom: 1px solid grey;
+}
+
+.shop table h2{
+	font-size: 20px;
+	margin-top: 5%;
+}
+
+.shop table p{
+	font-size: 15px;
+}
+
+.shop i{
+    font-size: 40px;
+    float: left;
+    color: darkred;
+}
+
+.shop table{
+    margin: 5%;
+    width: 90%;
+}
+
+.shop td, th{
+	text-align: center;
+	padding: 4%;
+}
+
+
+
+
+
+
+
