@@ -3,11 +3,15 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="css/custom.css">
-		<script type="text/javascript" src="js/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/mediaQueries/desktop.css">
+		<link rel="stylesheet" type="text/css" href="css/mediaQueries/tablet.css">
+		<link rel="stylesheet" type="text/css" href="css/mediaQueries/mobile.css">
+		<script type="text/javascript" src="js/library/jquery.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/resize.js"></script>
 		<title>GAMESTORE</title>
 	</head>
 	<body>
@@ -16,7 +20,7 @@
 					<p>Welcome to GAMESTORE</p>
 				</div>
 				<div class="contact">
-					<i class="fa fa-phone" aria-hidden="true"></i>
+					<a href="contacts.html"><i class="fa fa-phone" aria-hidden="true"></i></a>
 					<p><a href="contacts.html">Contact us</a></p>
 				</div>
 				<div class="login">
@@ -24,7 +28,7 @@
 					<p> User Login</p>
 				</div>
 				<div class="cart">
-					<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+					<a href="cart.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
 					<p><a href="cart.html">Cart</a> <span>0<span> </p>
 				</div>
 		</header>
@@ -40,6 +44,10 @@
 			
 		</div>
 		<div class="frame">
+				<div class="mobileSearch">
+					<p><i class="fa fa-search" aria-hidden="true"></i></p>
+					<input type="text" name="SearchGame" placeholder="  search here">
+				</div>
 				<div class="gamestore">
 					<a href="index.html"><p><span>GAME</span>STORE</p></a>
 				</div>	
@@ -52,10 +60,10 @@
 				<div class="destaque">
 					<img id="imgDestaque" src="">
 				</div>
-				<div class="destaque">
+				<div class="destaque destaqueFade destaqueFade2">
 					<img id="imgDestaque2" src="">
 				</div>
-				<div class="destaque">
+				<div class="destaque destaqueFade">
 					<img id="imgDestaque3" src="">
 				</div>
 				<div class="chevronRight">
@@ -74,6 +82,8 @@
 		<div class="frame2">	
 			<div class="gamesFrame">
 				<aside>
+					<button class="close"> < </button>
+					<button class="open"> > </button>
 					<nav>
 						<ul>
 							<li>Price</li>
@@ -461,16 +471,16 @@
 						</article>
 					</div>
 					<div class="productFrame group5">
-						<figure class="prod4"><img src="img/imgSystems/ps4Black.png"></figure>
-						<figcaption class="prod4">
+						<figure class="prod18"><img src="img/imgSystems/ps4Black.png"></figure>
+						<figcaption class="prod18">
 							<h3>PlayStation 4</h3><br>
 							<p><span>Black 500GB</span></p><br>
 							<p></p><br>
 							<p>299.99€</p>
-							<button class="readButton" id="4">Read More</button>
+							<button class="readButton" id="18">Read More</button>
 							<button class="cartButton">+ Add Cart</button>		
 						</figcaption>
-						<article class="4">
+						<article class="18">
 							<p>
 							With its sleeker and lighter model, the new PlayStation 4 console packs all the amazing features gamers have come to expect from PlayStation 4. PS4 is a platform to stimulate and fuel future evolution, hosting an amazing line-up of titles including The Last Guardian, Horizon: Zero Dawn and Watch_Dogs 2.
 							</p>

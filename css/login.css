@@ -2,9 +2,9 @@ header{
 	font-family: gotham;
 	width: 100%;
 	min-height: 30px;
-	background-color: lightgrey;
 	position: fixed;
 	top: 0%;
+	z-index: 10000;
 }
 
 header a{
@@ -15,10 +15,11 @@ header a{
 }
 
 .welcome{
-	width: 70%;
+	width: 65%;
 	height: 30px;
 	background-color: black;
 	float: left;
+	transition: width 1s;
 
 }
 
@@ -30,12 +31,12 @@ header a{
 
 
 .contact{
-	width: 9.9%;
+	width: 11.9%;
 	height: 30px;
 	margin-left: 0.1%;
 	background-color: black;
 	float: left;
-
+	transition: width 1s;
 }
 
 .contact p{
@@ -54,13 +55,14 @@ header a{
 }
 
 .login{
-	width: 9.9%;
+	width: 11.9%;
 	height: 30px;
 	margin-left: 0.1%;
-	background-color: black;
+	background-color: darkred;
 	float: left;
 	cursor: pointer;
-	background: darkred;
+	transition: width 1s;
+
 }
 
 .login p{
@@ -68,6 +70,7 @@ header a{
 	font-size: 15px;
 	margin: 7.5px 0 0 7px;
 	float: left;
+	text-decoration: underline;
 }
 
 .login i{
@@ -78,11 +81,13 @@ header a{
 }
 
 .cart{
-	width: 9.9%;
+	width: 10.9%;
 	height: 30px;
 	margin-left: 0.1%;
 	background-color: black;
 	float: left;
+	transition: width 1s;
+
 }
 
 .cart p{
@@ -90,13 +95,12 @@ header a{
 	font-size: 15px;
 	margin-top: 7.5px;
 	float: left;
-	margin-left: 5px;
 
 }
 
 .cart i{
 	font-size: 15px;
-	margin: 7.5px 10px 0 7px;
+	margin: 7.5px 7px 0 7px;
 	color: white;
 	float: left;
 	cursor: pointer;
@@ -138,6 +142,7 @@ header a{
 	width: 30%;
 	min-height: 45px;
 	float: left;
+	
 }
 
 .search input{
@@ -150,6 +155,10 @@ header a{
 .search p{
 	margin: 12px 0 0 0;
 	float: left;
+}
+
+.mobileSearch{
+	display: none;
 }
 
 .line{
@@ -188,9 +197,7 @@ header a{
 
 .destaque{
 	width: 30%;
-	height: 280px;
 	margin: 1.6%;
-	background-color: #eee;
 	float: left;
 
 }
@@ -200,10 +207,11 @@ header a{
 	height: 280px;
 	overflow: hidden;
 	border-radius: 5px;
+	transition: height 2s;
 }
 .menu{
 	width: 100%;
-	min-height: 50px;
+	min-height: 40px;
 	background: white;
 	float: left;
 
@@ -327,18 +335,17 @@ fieldset select{
     min-width: 23%;
 }
 
-fieldset .next{
-	width: 15%;
-	font-size: 16px;
-	font-family: gothamBold;
-	margin: 7% 0 0 36%;
-	background: #00d5bc;
-	color: white;
-	float: left;
-	padding: 1.5%;
-	border-radius: 5px;
-	border-style: none;
-	cursor: pointer;
+fieldset .next {
+    font-size: 14px;
+    font-family: gothamBold;
+    margin: 8% 0 0 36%;
+    background: #00d5bc;
+    color: white;
+    float: left;
+    padding: 2.5%;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
 }
 
 #basicForm{
@@ -379,14 +386,13 @@ fieldset .next{
 
 
 .lastStep #finish{
-	width: 19%;
-	font-size: 16px;
+	font-size: 14px;
 	font-family: gothamBold;
 	margin: 7% 0 0 40%;
 	background: #00d5bc;
 	color: white;
 	float: left;
-	padding: 1.5%;
+	padding: 2.5%;
 	border-radius: 5px;
 	border-style: none;
 }

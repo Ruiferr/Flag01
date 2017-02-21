@@ -2,9 +2,9 @@ header{
 	font-family: gotham;
 	width: 100%;
 	min-height: 30px;
-	background-color: lightgrey;
 	position: fixed;
 	top: 0%;
+	z-index: 10000;
 }
 
 header a{
@@ -15,10 +15,11 @@ header a{
 }
 
 .welcome{
-	width: 70%;
+	width: 65%;
 	height: 30px;
 	background-color: black;
 	float: left;
+	transition: width 1s;
 
 }
 
@@ -30,12 +31,12 @@ header a{
 
 
 .contact{
-	width: 9.9%;
+	width: 11.9%;
 	height: 30px;
 	margin-left: 0.1%;
 	background-color: black;
 	float: left;
-
+	transition: width 1s;
 }
 
 .contact p{
@@ -54,12 +55,14 @@ header a{
 }
 
 .login{
-	width: 9.9%;
+	width: 11.9%;
 	height: 30px;
 	margin-left: 0.1%;
 	background-color: black;
 	float: left;
 	cursor: pointer;
+	transition: width 1s;
+
 }
 
 .login p{
@@ -78,11 +81,13 @@ header a{
 }
 
 .cart{
-	width: 9.9%;
+	width: 10.9%;
 	height: 30px;
 	margin-left: 0.1%;
 	background-color: black;
 	float: left;
+	transition: width 1s;
+
 }
 
 .cart p{
@@ -90,13 +95,12 @@ header a{
 	font-size: 15px;
 	margin-top: 7.5px;
 	float: left;
-	margin-left: 5px;
 
 }
 
 .cart i{
 	font-size: 15px;
-	margin: 7.5px 10px 0 7px;
+	margin: 7.5px 7px 0 7px;
 	color: white;
 	float: left;
 	cursor: pointer;
@@ -111,7 +115,7 @@ header a{
 
 .loginWindow{
 	width: 40%;
-	position: fixed;
+	position: absolute;
 	min-height: 50px;
 	margin: 0 0 0 60%;
 	font-family: gotham;
@@ -121,8 +125,11 @@ header a{
 	color: white;
 	display: none;
 	border-radius: 0 0 0 20px;
+	position: fixed;
 	top: 30px;
 	z-index: 10000;
+
+
 
 }
 
@@ -156,10 +163,11 @@ header a{
 	color: yellow;
 }
 
+
 .profileWindow{
 	width: 10%;
-	position: absolute;
 	min-height: 50px;
+	opacity: 0.9;
 	margin: 0 0 0 80%;
 	font-family: gotham;
 	font-size: 15px;
@@ -170,7 +178,7 @@ header a{
 	position: fixed;
 	top: 30px;
 	z-index: 10000;
-	
+
 }
 
 .profileWindow p{
@@ -212,6 +220,7 @@ header a{
 	width: 30%;
 	min-height: 45px;
 	float: left;
+	display: none;
 }
 
 .search input{
@@ -225,6 +234,11 @@ header a{
 	margin: 12px 0 0 0;
 	float: left;
 }
+
+.mobileSearch{
+	display: none;
+}
+
 
 .line{
 	width: 96.4%;
@@ -243,9 +257,7 @@ header a{
 
 .destaque{
 	width: 96.5%;
-	height: 280px;
 	margin: 1.6%;
-	background-color: #eee;
 	float: left;
 
 }
@@ -300,7 +312,6 @@ header a{
 
 .frame2{
 	width: 100%;
-	min-height: 1700px;
 	background: #eee;
 	float: left;
 
@@ -314,7 +325,7 @@ header a{
 
 .gameName{
 	width: 50%;
-	min-height: 100px;
+	height: 100px;
 	float: left;
 }
 
@@ -333,7 +344,21 @@ header a{
 
 .gameBuy{
 	width: 50%;
-	min-height: 100px;
+	height: 100px;
+	float: left;
+}
+
+.gameBuy table {
+    width: 100%;
+    margin: 5% 0 0 0;
+}
+
+.gameBuy td{
+	float: left;
+}
+
+.gameBuy #buyButton{
+	margin-left: 15%;
 	float: left;
 }
 
@@ -342,18 +367,16 @@ header a{
 	font-family: gotham;
 }
 
-.gameBuy p{
-	font-size: 17px;
-	font-family: gotham;
-	margin: 5% 0 0 50%;
+.gameBuy p {
+    font-size: 17px;
+    font-family: gotham;
+    margin: 0 0 0 50%;
 }
 
 .gameBuy button{
-	width: 15%;
 	font-size: 16px;
 	font-family: gotham;
 	float: left;
-	margin: -5.5% 0 0 79%;
 	background: #00d5bc;
 	border-style: none;
 	border-radius: 5px;
@@ -375,7 +398,6 @@ header a{
 
 article{
 	width: 50%;
-	min-height: 325px;
 	float: left;
 }
 
@@ -496,7 +518,7 @@ article p{
 
 .extraContent{
 	width: 85%;
-	margin: 0 6.5% 0 6.5%;
+	margin: 0 6.5% 2% 6.5%;
 	float: left;
 	border: 1px solid lightgrey;
 	border-radius: 8px;
@@ -511,28 +533,40 @@ article p{
 }
 
 .extraFooter{
-	width: 25%;
-	min-height: 130px;
+	width: 100%;
 	font-family: gotham;
 	float: left; 
 	padding: 3%;
 }
 
-.extraFooter figure{
-	width: 25%;
-	float: left;
-
+.extraFooter table{
+	width: 100%;
 }
 
-.extraFooter figure img{
-	width: 75%;
-	min-height: 70px;
+.extraFooter table td{
+	width: 33%;
+	float: left;
+	min-height: 100px;
+}
+
+#extraBorder{
+	border-right: 1px solid grey;
+}
+
+.extraFooter figure{
+	width: 20%;
+	float: left;
+}
+
+.extraFooter img{
+    width: 100%;
+    height: 90px;
 	overflow: hidden;
 
 }
 
 .extraFooter span{
-	width: 60%;
+	width: 75%;
 	font-family: gothamBold;
 	margin-left: 4%;
 	float: left;
@@ -542,15 +576,7 @@ article p{
 .extraFooter p{
 	float: left;
 	width: 60%;
-	padding: 4%;
-	margin-top: 4%; 
+	margin: 4% 0 2% 4%; 
 }
 
-.separador{
-    background: grey;
-    width: 1px;
-    min-height: 81px;
-    float: left;
-    margin-top: 3%;
-}
 

@@ -1,13 +1,7 @@
-
-body{
-
-}
-
 header{
 	font-family: gotham;
 	width: 100%;
 	min-height: 30px;
-	background-color: lightgrey;
 	display: none;
 	position: fixed;
 	top: 0%;
@@ -22,10 +16,11 @@ header a{
 }
 
 .welcome{
-	width: 70%;
+	width: 65%;
 	height: 30px;
 	background-color: black;
 	float: left;
+	transition: width 1s;
 
 }
 
@@ -37,12 +32,12 @@ header a{
 
 
 .contact{
-	width: 9.9%;
+	width: 11.9%;
 	height: 30px;
 	margin-left: 0.1%;
 	background-color: black;
 	float: left;
-
+	transition: width 1s;
 }
 
 .contact p{
@@ -61,12 +56,14 @@ header a{
 }
 
 .login{
-	width: 9.9%;
+	width: 11.9%;
 	height: 30px;
 	margin-left: 0.1%;
 	background-color: black;
 	float: left;
 	cursor: pointer;
+	transition: width 1s;
+
 }
 
 .login p{
@@ -85,11 +82,13 @@ header a{
 }
 
 .cart{
-	width: 9.9%;
+	width: 10.9%;
 	height: 30px;
 	margin-left: 0.1%;
 	background-color: black;
 	float: left;
+	transition: width 1s;
+
 }
 
 .cart p{
@@ -97,7 +96,6 @@ header a{
 	font-size: 15px;
 	margin-top: 7.5px;
 	float: left;
-	margin-left: 5px;
 
 }
 
@@ -132,8 +130,6 @@ header a{
 	top: 30px;
 	z-index: 10000;
 
-
-
 }
 
 .loginWindow button{
@@ -166,11 +162,12 @@ header a{
 	color: yellow;
 }
 
-.profileWindow{
-	width: 10%;
-	min-height: 50px;
-	opacity: 0.9;
-	margin: 0 0 0 80%;
+
+.profileWindow {
+    width: 12%;
+    min-height: 50px;
+    opacity: 0.9;
+    margin: 0 0 0 77.1%;
 	font-family: gotham;
 	font-size: 15px;
 	background: black;
@@ -239,6 +236,10 @@ header a{
 	float: left;
 }
 
+.mobileSearch{
+	display: none;
+}
+
 .line{
 	width: 96.4%;
 	height: 1.2px;
@@ -252,6 +253,7 @@ header a{
 .destaqueLayout{
 	width: 100%;
 	float: left;
+	display: none;
 
 }
 
@@ -276,12 +278,9 @@ header a{
 
 .destaque{
 	width: 30%;
-	height: 280px;
 	margin: 1.6%;
-	background-color: #eee;
 	float: left;
-	display: none;
-
+	transition: width 1s; 
 }
 
 .destaque img{
@@ -289,6 +288,7 @@ header a{
 	height: 280px;
 	overflow: hidden;
 	border-radius: 5px;
+	transition: height 1s;
 }
 
 .menu{
@@ -346,6 +346,7 @@ header a{
 .gamesFrame ul{
 	font-family: gotham;
 	margin: 30% 0 0 36%;
+	transition: margin 2s;
 
 }
 
@@ -368,6 +369,23 @@ header a{
 	min-height: 800px;
 	background: #eee;
 	float: left; 
+	transition: width 2s;
+}
+
+.close{
+	position: absolute;
+    margin-left: 34.5%;
+    padding: 15% 0 15% 0;
+    font-size: 15px;
+    display: none;
+}
+
+.open{
+	position: absolute;
+    margin-left: 17.5%;
+    padding: 15% 0 15% 0;
+    font-size: 15px;
+    display: none;
 }
 
 .gameLayout{
@@ -376,6 +394,7 @@ header a{
 	background: #eee;
 	margin-top: 6%;
 	float: left;
+	transition: width 2s;
 }
 
 .game{
@@ -386,12 +405,11 @@ header a{
 	background: white;
 	border-radius: 10px;
 	opacity: 0.8;
+	transition: width 2s;
 }
 
 .game figure{
 	width: 100%;
-	height: 150px;
-	background: grey;
 	float: left;
 	border-radius: 10px 10px 0 0;
 	cursor: pointer;
@@ -408,7 +426,6 @@ header a{
 .game figcaption{
 	font-family: gothamBold;
 	width: 88%;
-	height: 20px;
 	margin: 13px 0 0 6%;
 	float: left;
 	cursor: pointer;
@@ -456,7 +473,7 @@ header a{
 
 }
 
-.cartButton:active{
+.cartButton:hover{
     background-color: rgb(76, 175, 81);
     color: white;
 }
@@ -529,7 +546,7 @@ header a{
 	max-height: 90px;
 	float: left;
 	background: white;
-    transition: max-height 1.5s
+    transition: max-height 3s
 }
 
 .bottomGame{
@@ -546,8 +563,8 @@ header a{
 }
 
 .latestGame:hover{
-	max-height: 550px;
-	transition: max-height 1.5s
+	max-height: 800px;
+	transition: max-height 3s
 }
 
 .latestGame img{
@@ -608,10 +625,11 @@ header a{
 .title{
 	width: 100%;
 	background: darkred;
-	border-radius: 5px 0 0 5px;
+	border-radius: 50px 0 0 5px;
 	opacity: 0.7;
 	float: left;
-	padding: 0.5%
+	padding: 0.3%;
+	margin-top: 1%;
 }
 
 .title h2{
@@ -640,6 +658,7 @@ header a{
 	border-left: 1px solid lightgrey;
 	min-height: 200px;
 	float: left;
+	transition: width 2s;
 }
 
 .topGame{
@@ -659,7 +678,7 @@ header a{
 
 .topGame img{
 	width: 100%;
-	min-height: 150px;
+	height: 150px;
 	overflow: hidden;
 	cursor: pointer;
 }
@@ -801,13 +820,13 @@ header a{
 
 .productFrame img{
 	width: 100%;
-	min-height: 150px;
+	height: 153px;
 	cursor: pointer;
 }
 
 .systemFrame button{
     margin: 2% 0 0 6%;
-    font-size: 12px;
+    font-size: 13px;
     background: #eee;
 }
 
@@ -826,21 +845,7 @@ header a{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* FOOTER */
 
 footer{
 	width: 100%;
@@ -866,7 +871,6 @@ footer a:hover{
 }
 
 footer td{
-	padding: 0.3%;
 	color: white;
 	font-family: gotham;
 	text-align: center;
@@ -890,4 +894,5 @@ footer .special{
 
 	font-size: 30px;
 }
+
 

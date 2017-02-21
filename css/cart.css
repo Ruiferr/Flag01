@@ -1,6 +1,3 @@
-body{
-	background: white;
-}
 header{
 	font-family: gotham;
 	width: 100%;
@@ -18,10 +15,11 @@ header a{
 }
 
 .welcome{
-	width: 70%;
+	width: 65%;
 	height: 30px;
 	background-color: black;
 	float: left;
+	transition: width 1s;
 
 }
 
@@ -33,12 +31,12 @@ header a{
 
 
 .contact{
-	width: 9.9%;
+	width: 11.9%;
 	height: 30px;
 	margin-left: 0.1%;
 	background-color: black;
 	float: left;
-
+	transition: width 1s;
 }
 
 .contact p{
@@ -57,12 +55,14 @@ header a{
 }
 
 .login{
-	width: 9.9%;
+	width: 11.9%;
 	height: 30px;
 	margin-left: 0.1%;
 	background-color: black;
 	float: left;
 	cursor: pointer;
+	transition: width 1s;
+
 }
 
 .login p{
@@ -81,11 +81,13 @@ header a{
 }
 
 .cart{
-	width: 9.9%;
+	width: 10.9%;
 	height: 30px;
 	margin-left: 0.1%;
+	background-color: darkred;
 	float: left;
-	background: darkred;
+	transition: width 1s;
+
 }
 
 .cart p{
@@ -93,18 +95,12 @@ header a{
 	font-size: 15px;
 	margin-top: 7.5px;
 	float: left;
-	margin-left: 5px;
-
-}
-
-.cart span{
-	color: yellow;
 
 }
 
 .cart i{
 	font-size: 15px;
-	margin: 7.5px 10px 0 7px;
+	margin: 7.5px 7px 0 7px;
 	color: white;
 	float: left;
 	cursor: pointer;
@@ -112,15 +108,14 @@ header a{
 
 .frame{
 	width: 90%;
-	min-height: 1100px;
+	min-height: 200px;
 	margin: 7% 5% 0 5%;
 	background: white;
 }
 
-
 .loginWindow{
 	width: 40%;
-	position: fixed;
+	position: absolute;
 	min-height: 50px;
 	margin: 0 0 0 60%;
 	font-family: gotham;
@@ -130,8 +125,11 @@ header a{
 	color: white;
 	display: none;
 	border-radius: 0 0 0 20px;
+	position: fixed;
 	top: 30px;
 	z-index: 10000;
+
+
 
 }
 
@@ -165,10 +163,11 @@ header a{
 	color: yellow;
 }
 
+
 .profileWindow{
 	width: 10%;
-	position: absolute;
 	min-height: 50px;
+	opacity: 0.9;
 	margin: 0 0 0 80%;
 	font-family: gotham;
 	font-size: 15px;
@@ -179,7 +178,7 @@ header a{
 	position: fixed;
 	top: 30px;
 	z-index: 10000;
-	
+
 }
 
 .profileWindow p{
@@ -191,7 +190,6 @@ header a{
 	background: darkred;
 	border-radius: 0 0 0 10px;
 }
-
 
 .gamestore a{
 	text-decoration: none;
@@ -226,7 +224,7 @@ header a{
 
 .search input{
 	width: 78.5%;
-	margin: 8px 0 0 10px;
+	margin: 7px 0 0 10px;
 	font-size: 20px;
 	float: left;
 }
@@ -235,6 +233,11 @@ header a{
 	margin: 12px 0 0 0;
 	float: left;
 }
+
+.mobileSearch{
+	display: none;
+}
+
 
 .line{
 	width: 96.4%;
@@ -407,22 +410,32 @@ aside{
 .disclaimer{
 	width: 100%;
     margin-top: 2%;
-	min-height: 100px;
 	background: #eee;
 	float: left;
 
 }
 
+.disclaimer figure{
+	width: 15%;
+	float: left;
+}
+
+.deliveryDisclaimer{
+	width: 80%;
+	float: left;
+}
+
 .disclaimer p{
-    font-size: 22px;
-    margin: 7%;
+    width: 98%;
+    padding: 2%;
     float: left;
     font-family: gotham;
+    text-align: left;
 }
 
 .disclaimer i{
+	width: 100%;
 	font-size: 45px;
-	float: left;
 }
 
 .disclaimer span{

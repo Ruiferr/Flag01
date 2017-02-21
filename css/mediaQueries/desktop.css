@@ -1,0 +1,40 @@
+@media screen and (max-width: 1280px){
+		
+	.gamesFrame ul {
+	    margin: 30% 0 0 20%;
+	}
+
+	.game {
+	    width: 30%;
+	}
+	
+	.profileWindow {
+    	width: 11.9%;
+	    margin: 0 0 0 77.1%;
+	}
+	.disclaimer p {
+	    font-size: 15px;
+	    margin-left: 10%;
+    }
+
+    .disclaimer i{
+		font-size: 35px;
+		padding: 1%;
+	}
+
+	.promoCode p {
+   		 width: 90%;
+
+    }
+
+	.promoCode button {
+	    float: left;
+	    margin: 3% 7% 0 35%;
+    }
+
+    .promoCode input {
+    	font-size: 13px;
+
+    }
+
+}

@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	//Imagens de destaque aleatórias
+	// RANDOM SLIDER IMAGES
 
 	var images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
 	
@@ -10,11 +10,11 @@ $(document).ready(function(){
 	};
 
 	var random = shuffle(images);
-   	document.getElementById("imgDestaque").src = "img/Destaque"+random[0]+".jpg";
-   	document.getElementById("imgDestaque2").src = "img/Destaque"+random[1]+".jpg";
-   	document.getElementById("imgDestaque3").src = "img/Destaque"+random[2]+".jpg";
+   	document.getElementById("imgDestaque").src = "img/imgDestaque/Destaque"+random[0]+".jpg";
+   	document.getElementById("imgDestaque2").src = "img/imgDestaque/Destaque"+random[1]+".jpg";
+   	document.getElementById("imgDestaque3").src = "img/imgDestaque/Destaque"+random[2]+".jpg";
 
-	//Seta chevron na área de destaque
+	// CHEVRON ARROW RIGHT SIDE
 
 
    	$('.destaqueLayout').mouseenter(function() {
@@ -30,9 +30,9 @@ $(document).ready(function(){
    		var j = Math.floor(Math.random() * 7) + 8;
    		var k = Math.floor(Math.random() * 6) + 15;
 	
-   		document.getElementById("imgDestaque2").src = "img/Destaque"+random[j]+".jpg";
-	   	document.getElementById("imgDestaque3").src = "img/Destaque"+random[k]+".jpg";  			
-	   	document.getElementById("imgDestaque").src = "img/Destaque"+random[i]+".jpg";	
+   		document.getElementById("imgDestaque2").src = "img/imgDestaque/Destaque"+random[j]+".jpg";
+	   	document.getElementById("imgDestaque3").src = "img/imgDestaque/Destaque"+random[k]+".jpg";  			
+	   	document.getElementById("imgDestaque").src = "img/imgDestaque/Destaque"+random[i]+".jpg";	
 
 	});
 

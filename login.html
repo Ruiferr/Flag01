@@ -3,11 +3,15 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="css/login.css">
-		<script type="text/javascript" src="js/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/mediaQueries/desktop.css">
+		<link rel="stylesheet" type="text/css" href="css/mediaQueries/tablet.css">
+		<link rel="stylesheet" type="text/css" href="css/mediaQueries/mobile.css">
+		<script type="text/javascript" src="js/library/jquery.js"></script>
 		<script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript" src="js/resize.js"></script>
 		<title>GAMESTORE</title>
 	</head>
 	<body>
@@ -16,7 +20,7 @@
 					<p>Welcome to GAMESTORE</p>
 				</div>
 				<div class="contact">
-					<i class="fa fa-phone" aria-hidden="true"></i>
+					<a href="contacts.html"><i class="fa fa-phone" aria-hidden="true"></i></a>
 					<p><a href="contacts.html">Contact us</a></p>
 				</div>
 				<div class="login">
@@ -24,11 +28,15 @@
 					<p> User Login</p>
 				</div>
 				<div class="cart">
-					<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-					<p><a href="cart.html">Cart</a> <span>0<span></p>
+					<a href="cart.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
+					<p><a href="cart.html">Cart</a> <span>0<span> </p>
 				</div>
 		</header>
 		<div class="frame">
+				<div class="mobileSearch">
+					<p><i class="fa fa-search" aria-hidden="true"></i></p>
+					<input type="text" name="SearchGame" placeholder="  search here">
+				</div>
 				<div class="gamestore">
 					<a href="index.html"><p><span>GAME</span>STORE</p></a>
 				</div>	
@@ -41,10 +49,10 @@
 				<div class="destaque">
 					<img id="imgDestaque" src="">
 				</div>
-				<div class="destaque">
+				<div class="destaque destaqueFade destaqueFade2">
 					<img id="imgDestaque2" src="">
 				</div>
-				<div class="destaque">
+				<div class="destaque destaqueFade">
 					<img id="imgDestaque3" src="">
 				</div>
 				<div class="chevronRight">
@@ -53,10 +61,7 @@
 			</div>
 			<nav class="menu">
 				<ul>
-					<li><a href="index2.html">< GAMES</a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
+					<li class="nav navSpecial" id="nav1"><a href="index.html">< GAMES</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -161,6 +166,8 @@
 				</div>
 			</div>	
 		</div>
+	</body>
+</html>
 
 
 

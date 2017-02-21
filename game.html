@@ -3,15 +3,20 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/plugin/colorbox.css">
+		<link rel="stylesheet" type="text/css" href="css/plugin/slick.css">
+		<link rel="stylesheet" type="text/css" href="css/plugin/slick-theme.css">
 		<link rel="stylesheet" type="text/css" href="css/game.css">
-		<link rel="stylesheet" type="text/css" href="css/colorbox.css">
-		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/colorbox.js"></script>
-		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-		<script type="text/javascript" src="js/gameOverview.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/mediaQueries/desktop.css">
+		<link rel="stylesheet" type="text/css" href="css/mediaQueries/tablet.css">
+		<link rel="stylesheet" type="text/css" href="css/mediaQueries/mobile.css">
+		<script type="text/javascript" src="js/library/jquery.js"></script>
+		<script type="text/javascript" src="js/plugin/colorbox.js"></script>
+		<script type="text/javascript" src="js/plugin/slick.js"></script>
+		<script type="text/javascript" src="js/game.js"></script>
+		<script type="text/javascript" src="js/resize.js"></script>
 		<title>GAMESTORE</title>
 	</head>
 	<body>
@@ -20,7 +25,7 @@
 					<p>Welcome to GAMESTORE</p>
 				</div>
 				<div class="contact">
-					<i class="fa fa-phone" aria-hidden="true"></i>
+					<a href="contacts.html"><i class="fa fa-phone" aria-hidden="true"></i></a>
 					<p><a href="contacts.html">Contact us</a></p>
 				</div>
 				<div class="login">
@@ -28,7 +33,7 @@
 					<p> User Login</p>
 				</div>
 				<div class="cart">
-					<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+					<a href="cart.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
 					<p><a href="cart.html">Cart</a> <span>0<span></p>
 				</div>
 		</header>
@@ -44,6 +49,10 @@
 			
 		</div>
 		<div class="frame">
+				<div class="mobileSearch">
+					<p><i class="fa fa-search" aria-hidden="true"></i></p>
+					<input type="text" name="SearchGame" placeholder="  search here">
+				</div>
 				<div class="gamestore">
 					<a href="index.html"><p><span>GAME</span>STORE</p></a>
 				</div>	
@@ -53,16 +62,13 @@
 				</div>
 				<div class="line"></div>
 			<div class="destaqueLayout">
-				<div class="destaque">
-					<img id="imgDestaque" src="img/gameOverview/layout1.jpg">
+				<div class="destaque destaqueMobile">
+					<img id="imgDestaque" src="img/imgGame/layout1.jpg">
 				</div>
 			</div>
 			<nav class="menu">
 				<ul>
-					<li class="nav" id="nav1"><a href="index2.html">< GAMES</a></li>
-					<li class="nav" id="nav2"><a href=""></a></li>
-					<li class="nav" id="nav3"><a href=""></a></li>
-					<li class="nav" id="nav4"><a href=""></a></li>
+					<li class="nav navSpecial" id="nav1"><a href="index.html">< GAMES</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -73,14 +79,26 @@
 					<h3>Rockstar Games</h3>
 				</div>
 				<div class="gameBuy">
-					<p><span>9.2/10</span> Superb</p>
-					<a href="cart.html"><button>59.99 € Buy Now</button></a>
+					<table>
+						<tr>
+							<td id="rating">
+								<p><span>9.2/10</span><br> 
+								Superb
+								</p>
+							</td>
+							<td id="buyButton">
+								<a href="cart.html"><button>59.99 €<br>
+								Buy Now</button>
+								</a>
+							</td>
+						</tr>
+					</table>
 				</div>
 				<div class="images">
-					<figure><a href="img/gameOverview/overview1.jpg"><img src="img/gameOverview/overview1.jpg"></a></figure>
-					<figure><a href="img/gameOverview/overview2.jpg"><img src="img/gameOverview/overview2.jpg"></a></figure>
-					<figure><a href="img/gameOverview/overview3.jpg"><img src="img/gameOverview/overview3.jpg"></a></figure>
-					<figure><a href="img/gameOverview/overview4.jpg"><img src="img/gameOverview/overview4.jpg"></a></figure>
+					<figure><a href="img/imgGame/overview1.jpg"><img src="img/imgGame/overview1.jpg"></a></figure>
+					<figure><a href="img/imgGame/overview2.jpg"><img src="img/imgGame/overview2.jpg"></a></figure>
+					<figure><a href="img/imgGame/overview3.jpg"><img src="img/imgGame/overview3.jpg"></a></figure>
+					<figure><a href="img/imgGame/overview4.jpg"><img src="img/imgGame/overview4.jpg"></a></figure>
 				</div>
 				<article>
 					<p>Grand Theft Auto V is an open-world crime epic set in the LA-inspired city of Los Santos around the lives of Franklin, a street hustler looking for real opportunities. Developed by Rockstar North and published by Rockstar Games. The game was released on 17 September 2013 for the PlayStation 3 and Xbox 360, on 18 November 2014 for the PlayStation 4 and Xbox One, and on 14 April 2015 for Microsoft Windows. It is the first main entry in the Grand Theft Auto series since 2008's Grand Theft Auto IV. Extensively marketed and widely anticipated, the game broke industry sales records and became the fastest-selling entertainment product in history, earning US $800 million in its first day and US $1 billion in its first three days</p>
@@ -149,25 +167,28 @@
 					<p><span>LAST CHANCE TO TRANSFER FROM PS3 &amp; XBOX 360</span><br><br>Now is your last chance to transfer your existing GTA Online characters and progression from PlayStation 3 or Xbox 360 to PlayStation 4, Xbox One or PC. This will no longer be possible after March 6, 2017. <br><br>Experience the definitive version of GTAV, which features across-the-board graphical and technical improvements to deliver a stunning new level of detail, a video editor designed for advanced movie-making inside the game, and the massively upgraded GTA Online, with access to all the latest vehicles and gameplay from our continuing series of free updates including the recent Import/Export update.<br><br>For more information, visit <a href="www.rockstargames.com/gtaonline/charactertransfer">www.rockstargames.com/gtaonline/charactertransfer</a>.<br><br></p>
 				</div>
 				<div class="extraFooter">
-					<figure><img src="img/gameOverview/pegi18.png"></figure>
-					<span>Pegi Rating:</span>
-
-					<p>Suitable for people aged 18 and over.</p>
-				</div>
-				<div class="separador"></div>
-				<div class="extraFooter">
-					<span>Genre:</span>
-					<p>Action-Adventure</p>
-				</div>
-				<div class="separador"></div>
-				<div class="extraFooter">
-					<span>Customer Rating:</span>
-					<p>8.9/10</p>
+					<table>
+						<tr>
+							<td id="extraBorder">
+								<figure><img src="img/imgGame/pegi18.png"></figure>
+								<span>Pegi Rating:</span>
+								<p>Suitable for people aged 18 and over.</p>
+							</td>
+							<td id="extraBorder">
+								<span>Genre:</span>
+								<p>Action-Adventure</p>
+							</td>
+							<td>
+								<span>Customer Rating:</span>
+								<p>8.9/10</p>
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
-
-
 		</div>
+	</body>
+</html>
 
 
 

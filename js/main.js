@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$('.gamestore').fadeIn(4000);
 	$('header').fadeIn(1500);
 	$('.line').animate({width:'toggle'},2000, function(){
-		$('.destaque').fadeIn(800);
+		$('.destaqueLayout').fadeIn(800);
 		$('.frame2').fadeIn(800);
 		$('.menu').fadeIn(800);
 		$('footer').fadeIn(800);
@@ -21,19 +21,19 @@ $(document).ready(function(){
 	};
 
 	var random = shuffle(images);
-   	document.getElementById("imgDestaque").src = "img/Destaque"+random[0]+".jpg";
-   	document.getElementById("imgDestaque2").src = "img/Destaque"+random[1]+".jpg";
-   	document.getElementById("imgDestaque3").src = "img/Destaque"+random[2]+".jpg";
+   	document.getElementById("imgDestaque").src = "img/imgDestaque/Destaque"+random[0]+".jpg";
+   	document.getElementById("imgDestaque2").src = "img/imgDestaque/Destaque"+random[1]+".jpg";
+   	document.getElementById("imgDestaque3").src = "img/imgDestaque/Destaque"+random[2]+".jpg";
 
 	// CHEVRON ARROW RIGHT SIDE
 
 
    	$('.destaqueLayout').mouseenter(function() {
-  		$('.chevronRight').fadeIn(500);
+  		$('.chevronRight').stop().fadeIn(500);
 	});
 
 	$('.destaqueLayout').mouseleave(function() {
-  		$('.chevronRight').fadeOut(500);
+  		$('.chevronRight').stop().fadeOut(500);
 	});
 
    	$('.chevronRight').click(function(){
@@ -41,9 +41,9 @@ $(document).ready(function(){
    		var j = Math.floor(Math.random() * 7) + 8;
    		var k = Math.floor(Math.random() * 6) + 15;
 	
-   		document.getElementById("imgDestaque2").src = "img/Destaque"+random[j]+".jpg";
-	   	document.getElementById("imgDestaque3").src = "img/Destaque"+random[k]+".jpg";  			
-	   	document.getElementById("imgDestaque").src = "img/Destaque"+random[i]+".jpg";	
+   		document.getElementById("imgDestaque2").src = "img/imgDestaque/Destaque"+random[j]+".jpg";
+	   	document.getElementById("imgDestaque3").src = "img/imgDestaque/Destaque"+random[k]+".jpg";  			
+	   	document.getElementById("imgDestaque").src = "img/imgDestaque/Destaque"+random[i]+".jpg";	
 
 	});
 
@@ -167,7 +167,7 @@ $(document).ready(function(){
 				$(this).css('background', '#4CAF50');
 				$(this).css('color', 'white');
 			}
-	}); 
+	});
 
 	// GALERIA LATEST
 

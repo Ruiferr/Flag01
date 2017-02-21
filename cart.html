@@ -3,11 +3,15 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="css/cart.css">
-		<script type="text/javascript" src="js/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/mediaQueries/desktop.css">
+		<link rel="stylesheet" type="text/css" href="css/mediaQueries/tablet.css">
+		<link rel="stylesheet" type="text/css" href="css/mediaQueries/mobile.css">
+		<script type="text/javascript" src="js/library/jquery.js"></script>
 		<script type="text/javascript" src="js/cart.js"></script>
+		<script type="text/javascript" src="js/resize.js"></script>
 		<title>GAMESTORE</title>
 	</head>
 	<body>
@@ -16,7 +20,7 @@
 					<p>Welcome to GAMESTORE</p>
 				</div>
 				<div class="contact">
-					<i class="fa fa-phone" aria-hidden="true"></i>
+					<a href="contacts.html"><i class="fa fa-phone" aria-hidden="true"></i></a>
 					<p><a href="contacts.html">Contact us</a></p>
 				</div>
 				<div class="login">
@@ -40,6 +44,10 @@
 			
 		</div>
 		<div class="frame">
+				<div class="mobileSearch">
+					<p><i class="fa fa-search" aria-hidden="true"></i></p>
+					<input type="text" name="SearchGame" placeholder="  search here">
+				</div>
 				<div class="gamestore">
 					<a href="index.html"><p><span>GAME</span>STORE</p></a>
 				</div>	
@@ -99,7 +107,7 @@
 					</table>
 												
 				</div>
-				<aside>
+				<aside class="cartMobile">
 					<div class="proceed">
 						<table>
 							<tr>
@@ -113,8 +121,8 @@
 						<button>PROCEED TO CHECKOUT</button>
 					</div>
 					<div class="disclaimer">
-						<p><span><i class="fa fa-truck" aria-hidden="true"></i></span> Your order is eligible for <span>FREE</span> delivery!</p>
-						
+						<figure><span><i class="fa fa-truck" aria-hidden="true"></i></span></figure>
+						<div class="deliveryDisclaimer"><p>Your order is eligible for <span>FREE</span> delivery!</p></div>
 					</div>
 					<div class="promoCode">
 						<h2>Redeem a promo code</h2>

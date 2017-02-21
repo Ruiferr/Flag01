@@ -1,0 +1,426 @@
+@media screen and (max-width: 620px){
+
+	.welcome{
+		width: 62.5%;
+	}
+
+	.welcome p{
+		font-size: 13px;
+	}
+
+	.contact{
+		margin-left: 0.5%;
+		width: 12%;
+	}
+
+	.contact p{
+		display: none;
+	}
+
+	.login{
+		margin-left: 0%;
+		width: 12%;
+	}
+
+	.login p{
+		display: none;
+	}
+
+	.cart{
+		margin-left: 0%;
+		width: 12%;
+	}
+
+	.cart i{
+		margin: 7.5px 3px 0 4px;
+	}
+
+	.cart p a{
+		display: none;
+	}
+
+	.gamestore p{
+		font-size: 30px;
+		margin-top: 5%;
+	}
+	.destaqueFade{
+		display: none;
+	}
+
+	.destaque{
+		width: 97%;
+	}
+
+	.destaque img{
+		height: 280px;
+	}
+	
+	.chevronRight{
+		width: 8%;
+		height: 280px;
+		margin: 1.5% 0 0 80.2%;
+	}
+
+	.search{
+	}
+
+	.mobileSearch{
+		width: 100%;
+		min-height: 45px;
+		float: left;
+	}
+
+	.mobileSearch input{
+		width: 72.5%;
+		margin: 15px 0 0 10px;
+		font-size: 20px;
+		float: left;
+	}
+
+	.mobileSearch p{
+		margin: 12px 0 0 0;
+		float: left;
+	}
+	.mobileSearch i{
+		margin-top: 30%;
+		font-size: 20px;
+	}
+
+	.loginWindow{
+		width: 100%;
+		margin: 0;
+		border-radius: 0;
+	}
+
+	.profileWindow{
+		width: 36%;
+		margin: 0 0 0 63%;
+	}
+
+	.menu ul {
+	    width: 100%;
+	    margin: 2% 0 0 0%;
+	}
+	
+	.menu ul li{
+		width: 80%;
+	    font-size: 14px;
+	    float: none;
+	    margin-left: 8%;
+	    padding: 2%;
+	}
+
+	.active{
+		border-radius: 0;
+	}
+
+	.gamesFrame aside{
+		font-size: 12px;
+		width: 37%;
+		border-right: 1px solid black;
+		min-height: 100px;
+		margin-right: 2%;
+	}
+
+	.close{
+		display: block;
+	}
+
+	.gamesFrame li {
+    	font-size: 14px;
+	}
+
+	.gamesFrame ul{
+		font-size: 10px;
+		margin: 30% 0 0 5%;
+	}
+
+	.game {
+	    width: 94%;
+	    margin-left: 3%;
+	    margin-right: 3%;
+	    min-height: 285px;
+	}
+
+	.gameLayout{
+		width: 60%;
+	}
+
+	.game button {
+	    width: 50%;
+	    position: relative;
+	    margin-left: 50%;
+	    margin-top: -7%;
+	}
+
+
+	.latestGame p {
+	    font-size: 12px;
+	} 
+
+	.latestGame button {
+	    margin-left: 13%;
+	    font-size: 12px;
+	}
+
+	.latestGame img{
+		min-height: 110px;
+	}
+
+	.top{
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.rating span {
+    	font-size: 18px;
+	}
+
+	.topGame{
+		min-height: 330px;
+	}
+
+	.topGame figure {
+ 	   width: 100%;
+ 	   min-height: 125px;
+	}
+
+	.rating {
+   		 width: 100%;
+   	}
+
+	.topGame figcaption h3 {
+    	font-size: 18px;
+	}
+
+	.topGame figcaption {
+    	width: 70%;
+	}
+
+	.topGame .buyRead {
+    	width: 30%;
+    }
+
+    .topGame button {
+    	font-size: 16px;
+	}
+
+	.topGame figcaption p {
+	    font-size: 13px;
+	    margin: -2% 0 0 6%;
+	}
+
+	.topGame img{
+		width: 100%;
+		height: 165px;
+	}
+
+	.product {
+	    width: 100%;
+	    margin-left: 0;
+	}
+
+	.productFrame img {
+	    height: 100px;    
+		margin-top: 20%;
+	}
+
+	.systemFrame figcaption {
+	    width: 65%;
+	    font-family: gotham;
+	    float: left;
+	    min-height: 150px;
+	}
+
+	.systemFrame button{
+		font-size: 11px;
+		margin: 6% 0 0 6%;
+	}
+
+	.systemFrame figcaption h3 {
+	    font-size: 20px;
+	}
+
+	.systemFrame article p {
+	    font-size: 12px;
+    }
+
+    .shop {
+    	width: 100%;
+    	min-height: 50px;
+	}
+
+	.mapFrame{
+		position: absolute;
+	    width: 85%;
+    	top: 125%;
+	}
+
+	.frame .contactsMobile{
+	    width: 100%;
+	    margin: 0 0 0 -5%;
+	}
+
+	.mapFrame{
+		display: none;
+	}
+
+	.mapFrame2{
+		width: 80%;
+		margin-left: 10%;
+		display: block;
+	}
+
+	aside td {
+	    padding: 8% 0 5% 20%;
+	}
+
+	aside th {
+    	padding-right: 15%;
+	}
+
+	.progress ul li {
+    	font-size: 14px;
+    }
+
+	.productContent {
+    	width: 95.5%;
+
+    }
+
+    .frame .cartMobile{
+    	margin-left: 2.5%;
+    	width: 95.5%;
+	}
+
+	.proceed table .note {
+	    font-size: 10px;
+	    padding: 1% 10% 0 0;
+	    text-align: right;
+	}
+
+	.disclaimer figure {
+	    width: 25%;
+	    float: left;
+	}
+
+	.deliveryDisclaimer {
+	    width: 75%;
+	    float: left;
+	}
+
+	.disclaimer p {
+	    font-size: 20px;
+	    text-align: left;
+	    margin-left: 0;
+	}
+
+	.disclaimer i {
+	    font-size: 50px;
+	    margin-left: 30%;
+	}
+
+	.promoCode button {
+	    margin: 3% 7% 3% 40%;
+	    padding: 5% 10% 5% 10%;
+	}
+
+	.rewardPoints{
+		min-height: 0;
+		padding-bottom: 5% ;
+
+	}
+
+	.createAcc {
+	    width: 90%;
+	    min-height: 600px;
+	    margin-left: 10%;
+	    float: left;
+	}
+
+	fieldset input{
+		margin-left: 10%;
+	}
+
+	.newAcc h2{
+		margin-left: 7%;
+	}
+
+	.steps{
+		margin-bottom: 5%;
+	}
+
+	.steps #active{
+		margin-left: 7%;
+	}
+
+	.steps #active2{
+		margin-left: 25%;
+	}
+
+	.steps #active3{
+		margin-left: 50%;
+	}
+
+	.steps ul li{
+		float: none;
+		padding: 0.5%;
+	}
+
+	.lastStep p {
+	    font-family: gotham;
+	    text-align: justify;
+	    font-size: 22px;
+	}
+
+	.lastStep i {
+	    font-size: 100px;
+	    margin: 5% 0 5% 37%;
+
+	}
+
+	.destaqueMobile img{
+	    width: 100%;
+    	height: 170px;
+	}
+
+	.extraContent {
+    	font-size: 10px;
+
+    }
+
+   	.extraInfo h2{
+    	font-size: 16px;
+
+    }
+    .extraFooter img {
+	    width: 100%;
+	    height: 50px;
+    }
+
+    .item figcaption{
+    	font-size: 12px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
