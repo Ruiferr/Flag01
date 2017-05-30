@@ -165,10 +165,10 @@ header a{
 
 
 .profileWindow{
-	width: 10%;
-	min-height: 50px;
-	opacity: 0.9;
-	margin: 0 0 0 80%;
+    width: 12%;
+    min-height: 50px;
+    opacity: 0.9;
+    margin: 0 0 0 77.1%;
 	font-family: gotham;
 	font-size: 15px;
 	background: black;
@@ -184,6 +184,11 @@ header a{
 .profileWindow p{
 	padding: 5% 0 3% 24%;
 	cursor: pointer;
+}
+
+.profileWindow a{
+	text-decoration: none;
+	color: white;
 }
 
 .profileWindow p:hover{
@@ -365,6 +370,7 @@ header a{
 .gameBuy span{
 	font-size: 30px;
 	font-family: gotham;
+	margin: 0 0 0 50%;
 }
 
 .gameBuy p {
@@ -489,16 +495,14 @@ article p{
 }
 
 .item button{
-	border-style: none;
+	margin: 10% 0 10% 0;
 	background: #00d5bc;
-	color: #eee;
-	font-family: gothamBold;
-	text-align: center;
-	padding: 3%;
-	margin-left: 20%;
-	opacity: 0.5;
-	border-radius: 5px;
-	cursor: pointer;
+    color: #eee;
+    font-family: gothamBold;
+    padding: 3%;
+    opacity: 0.5;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .item button:hover{
@@ -566,17 +570,17 @@ article p{
 }
 
 .extraFooter span{
-	width: 75%;
-	font-family: gothamBold;
-	margin-left: 4%;
-	float: left;
+    width: 75%;
+    font-family: gothamBold;
+    margin-left: 4%;
+    float: left;
 
 }
 
 .extraFooter p{
-	float: left;
-	width: 60%;
-	margin: 4% 0 2% 4%; 
+    float: left;
+    width: 60%;
+    margin: 3% 0 2% 4%;
 }
 
 

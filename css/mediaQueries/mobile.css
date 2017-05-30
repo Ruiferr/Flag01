@@ -321,7 +321,7 @@
 	}
 
 	.promoCode button {
-	    margin: 3% 7% 3% 40%;
+	    margin: 3% 7% 3% 35%;
 	    padding: 5% 10% 5% 10%;
 	}
 
@@ -339,6 +339,10 @@
 	}
 
 	fieldset input{
+		margin-left: 10%;
+	}
+
+	fieldset select{
 		margin-left: 10%;
 	}
 

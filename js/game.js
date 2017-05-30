@@ -9,43 +9,47 @@ $(document).ready(function(){
   		dots: false,
     	prevArrow: false,
     	nextArrow: false,
+    	responsive: [
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3
+		      }
+		    },
+		    {
+		      breakpoint: 620,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    }
+		]
 	});
 
 
 	// LOGIN SECTION
 
-   	var val = 0
 
    	$('.login').click(function(){
-   		if ($('.loginWindow').css('display') == 'none' && val == 0){
+
+   		userName = $('.login p').html();
+
+   		if ($('.loginWindow').css('display') == 'none' && userName == 'Login'){
  			$('.loginWindow').fadeIn(1000);
    		}else{
-   			$('.loginWindow').hide()
+   			$('.loginWindow').hide();
    		}  
 
-   		if ($('.profileWindow').css('display') == 'none' && val == 1) {
+   		if ($('.profileWindow').css('display') == 'none' && userName !== 'Login'){
   			$('.profileWindow').fadeIn(1000);
    		}else{
-   			$('.profileWindow').hide()
+   			$('.profileWindow').hide();
    		}    			
 
    	});
-
-
-   	$('#login').click(function(){
-  		$('.login p').fadeOut(1000);
-  		$('.login').append("<p>User001</p>");
-		$('.loginWindow').hide();
-		val = 1;
-   	});
-
-   	$('#logout').click(function(){
-   		$('.login p').fadeOut(1000);
-		$('.login').append("<p>User Login</p>");
-		$('.profileWindow').hide();
-		val = 0
-   	})
-
+   
+   	// NAV BAR
 	
    	$('.nav').click(function(){
    		$('.nav').removeClass('active');
@@ -74,6 +78,41 @@ $(document).ready(function(){
 				$(this).css('background', 'lightskyblue');
 				$(this).css('color', 'white');
 			}
-	}); 
+	});
+
+	// RATING
+
+	var string = $('.gameBuy span').html();
+	var rating = string.substr(0,3);
+
+	if (rating < 10 && rating >= 9) {
+		$('.gameBuy p').append("Superb");
+	} else if (rating < 9 && rating >= 7.5) {
+			$('.gameBuy p').append("Great");
+		} else if (rating < 7.5 && rating >= 6.5) {
+				$('.gameBuy p').append("Good");	
+			} else if (rating < 6.5 && rating >= 5) {
+					$('.gameBuy p').append("Fair");	
+				} else if (rating < 5 && rating >= 4) {
+						$('.gameBuy p').append("Mediocre");	
+					} else if (rating < 4 && rating >= 0) {
+							$('.gameBuy p').append("Poor");	
+						}
+
 
 });
+
+
+
+function addCart(id) {
+	alert('hey!');
+	var productId = id;
+    $.post({'cartFunction.php',{value: productId},function(data) {
+
+
+	        	alert('hey!');
+
+        }
+
+    });
+ }

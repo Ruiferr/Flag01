@@ -165,10 +165,10 @@ header a{
 
 
 .profileWindow{
-	width: 10%;
-	min-height: 50px;
-	opacity: 0.9;
-	margin: 0 0 0 80%;
+    width: 12%;
+    min-height: 50px;
+    opacity: 0.9;
+    margin: 0 0 0 77.1%;
 	font-family: gotham;
 	font-size: 15px;
 	background: black;
@@ -184,6 +184,11 @@ header a{
 .profileWindow p{
 	padding: 5% 0 3% 24%;
 	cursor: pointer;
+}
+
+.profileWindow a{
+	text-decoration: none;
+	color: white;
 }
 
 .profileWindow p:hover{
@@ -216,11 +221,11 @@ header a{
 	color: darkred;
 }
 
-.line{
+.line2{
 	width: 96.4%;
 	height: 1.2px;
 	background: darkred;
-	margin: 0 1.6% 0 1.6%;
+	margin: 0 1.6% 2% 1.6%;
 	float: left;
 
 }

@@ -10,23 +10,7 @@ $(document).ready(function(){
 		$('#nav1').addClass('active');
 	});
 
-	// RANDOM SLIDER IMAGES
-
-
-	var images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
-	
-	function shuffle(n) {
-    for(var j, x, i = n.length; i; j = parseInt(Math.random() * i), x = n[--i], n[i] = n[j], n[j] = x);
-    return n;
-	};
-
-	var random = shuffle(images);
-   	document.getElementById("imgDestaque").src = "img/imgDestaque/Destaque"+random[0]+".jpg";
-   	document.getElementById("imgDestaque2").src = "img/imgDestaque/Destaque"+random[1]+".jpg";
-   	document.getElementById("imgDestaque3").src = "img/imgDestaque/Destaque"+random[2]+".jpg";
-
 	// CHEVRON ARROW RIGHT SIDE
-
 
    	$('.destaqueLayout').mouseenter(function() {
   		$('.chevronRight').stop().fadeIn(500);
@@ -36,138 +20,28 @@ $(document).ready(function(){
   		$('.chevronRight').stop().fadeOut(500);
 	});
 
-   	$('.chevronRight').click(function(){
-   		var i = Math.floor(Math.random() * 7);
-   		var j = Math.floor(Math.random() * 7) + 8;
-   		var k = Math.floor(Math.random() * 6) + 15;
-	
-   		document.getElementById("imgDestaque2").src = "img/imgDestaque/Destaque"+random[j]+".jpg";
-	   	document.getElementById("imgDestaque3").src = "img/imgDestaque/Destaque"+random[k]+".jpg";  			
-	   	document.getElementById("imgDestaque").src = "img/imgDestaque/Destaque"+random[i]+".jpg";	
-
-	});
 
 	// LOGIN SECTION
 
-   	var val = 0
 
    	$('.login').click(function(){
-   		if ($('.loginWindow').css('display') == 'none' && val == 0){
+
+   		userName = $('.login p').html();
+
+   		if ($('.loginWindow').css('display') == 'none' && userName == 'Login'){
  			$('.loginWindow').fadeIn(1000);
    		}else{
-   			$('.loginWindow').hide()
+   			$('.loginWindow').hide();
    		}  
 
-   		if ($('.profileWindow').css('display') == 'none' && val == 1) {
+   		if ($('.profileWindow').css('display') == 'none' && userName !== 'Login'){
   			$('.profileWindow').fadeIn(1000);
    		}else{
-   			$('.profileWindow').hide()
+   			$('.profileWindow').hide();
    		}    			
 
    	});
-
-
-   	$('#login').click(function(){
-  		$('.login p').fadeOut(1000);
-  		$('.login').append("<p>User001</p>");
-		$('.loginWindow').hide();
-		val = 1;
-   	});
-
-   	$('#logout').click(function(){
-   		$('.login p').fadeOut(1000);
-		$('.login').append("<p>User Login</p>");
-		$('.profileWindow').hide();
-		val = 0
-   	})
-
-
-	// NAV BAR
-
-   	$('.nav').click(function(){
-   		$('.nav').removeClass('active');
-		$(this).addClass('active');
-   	});
-
-   	$('#nav4').click(function(){
-   		$('.bestsellerFrame').hide();
-   		$('.gamesFrame').hide();
-   		$('.latestFrame').hide();
-   		$('.systemFrame').fadeIn(500);
-   	});
-
-   	$('#nav3').click(function(){
-   		$('.systemFrame').hide();
-   		$('.gamesFrame').hide();
-   		$('.latestFrame').hide();
-   		$('.bestsellerFrame').fadeIn(500);
-   	});
-
-   	$('#nav2').click(function(){
-   		$('.systemFrame').hide();
-   		$('.gamesFrame').hide();
-   		$('.bestsellerFrame').hide();
-   		$('.latestFrame').fadeIn(500);
-
-   	});
-
-   	$('#nav1').click(function(){
-   		$('.systemFrame').hide();
-   		$('.bestsellerFrame').hide();
-   		$('.latestFrame').hide();
-   		$('.gamesFrame').fadeIn(500);
-   	});
-
-
-    // GAME FILTERS
-
-
-	$('input:checkbox').click(function() {
-	    var select = '.' + $(this).attr('id');
-
-
-	    	if(this.checked){
-	    		$('.game').hide();
-	    		$(select).fadeIn(500);
-	      	} else{
-	    		$('.game').hide();		//o hide() seguido do fadeIn() é propositado
-	    		$('.game').fadeIn(500); 
-	      	}
-
-			//Selecção de uma única checkbox por grupo 
-
-			if (this.checked){
-			    var group = "input:checkbox[name='" + $(this).attr("name") + "']";
-			    $(group).prop("checked", false);
-			    $(this).prop("checked", true);
-			  } else {
-			    $(this).prop("checked", false);
-			  }
-
-	});
-
-
-	// CART SELECTION
-
-	var contador = 0
-	$('.cartButton').click(function(){
-		if ($(this).css('background-color') == 'rgb(76, 175, 80)') {
-			var subtrair = parseInt(contador) - 1;
-			$(this).css('background', 'white');
-			$(this).css('color', '#4CAF50');
-			$('.cart span').hide();
-			$('.cart p').append("<span>"+ subtrair +"</span>")
-			$('.cart p').css('color', 'yellow');
-			contador = subtrair
-		}else{
-				contador ++
-				$('.cart span').hide();
-				$('.cart p').append("<span>"+ contador +"</span>");
-				$('.cart p').css('color', 'yellow');
-				$(this).css('background', '#4CAF50');
-				$(this).css('color', 'white');
-			}
-	});
+  
 
 	// GALERIA LATEST
 
@@ -181,32 +55,27 @@ $(document).ready(function(){
 		$('.bottomGame article').stop().slideUp(1000);
 	});
 
-	// READ ME BUTTON (SYSTEM SECTION)
+	// SEARCH
 
+	$('.search input').keyup(function(e){
+ 		if (e.keyCode == 13) {
+ 			carregaZona("search");
+ 		}
+ 	});
 
-	$('.productFrame .readButton').click(function(){
-		var button = '#' + $(this).attr('id');
-		var prodNumber = $(this).attr('id');
-		var border = '.' + 'prod' + prodNumber;
-		var article = '.' + $(this).attr('id');
+ 	$('.mobileSearch input').keyup(function(e){
+ 		if (e.keyCode == 13) {
+ 			carregaZona("search");
+ 		}
+ 	});
 
-
-		if ($(button).css('background-color') == 'rgb(238, 238, 238)'){
-			$(button).css('background-color', 'rgb(55, 145, 202)');
-			$(button).css('color', 'rgb(238, 238, 238)');
-			$(border).css('border-bottom', 'none');
-			$(border).css('border-bottom', 'none');
-			$(article).slideDown(1000);
-		} else {
-				$(article).slideUp(1000, function(){
-					$(button).css('background-color', 'rgb(238, 238, 238)');
-					$(button).css('color', 'rgb(55, 145, 202)');
-					$(border).css('border-bottom', '1px solid rgba(139, 0, 0, 0.317647)');
-					$(border).css('border-bottom', '1px solid rgba(139, 0, 0, 0.317647)');					
-				});
-			}
-	});
 });
+
+
+
+
+// <------------- FUNCTIONS  ---------------->
+
 
 
 // BESTSELLER SELECTION
@@ -240,56 +109,144 @@ function select2(){
 
 	switch(selection){
 		case 'all' : { 
+			 $('.group4').fadeIn(1000); 
 			 $('.group5').fadeIn(1000); 
 			 $('.group6').fadeIn(1000); 
-			 $('.group7').fadeIn(1000); 
 			 $('.group8').fadeIn(1000); 
 		} break;		
 		case 'ps4' : { 
-			 $('.group5').fadeIn(1000); 
+			 $('.group4').fadeIn(1000); 
 			 $('.group8').hide(); 
-			 $('.group85').fadeIn(1000);
+			 $('.group5').hide(); 
 			 $('.group6').hide(); 
-			 $('.group7').hide(); 
 		} break;
 		case 'xbox' : { 
-			 $('.group6').fadeIn(1000); 
+			 $('.group5').fadeIn(1000); 
 			 $('.group8').hide(); 
-			 $('.group86').fadeIn(1000);
-			 $('.group5').hide(); 
-			 $('.group7').hide(); 
+			 $('.group4').hide(); 
+			 $('.group6').hide(); 
 		} break;
 		case 'nitendo' : { 
-			 $('.group7').fadeIn(1000); 
-			 $('.group5').hide(); 
-			 $('.group6').hide();
+			 $('.group6').fadeIn(1000); 
+			 $('.group4').hide(); 
+			 $('.group5').hide();
 			 $('.group8').hide();
 		} break;
 		case 'accessories' : {
 			 $('.group8').fadeIn(1000); 
-			 $('.group5').hide(); 
+			 $('.group4').hide(); 
+			 $('.group5').hide();
 			 $('.group6').hide();
-			 $('.group7').hide();
 		} break;
 	}
 }
+
 
 function select3(){
 	var selection = document.getElementById('option3').value;
 
 		switch(selection){
 		case 'all2' : {
+			 $('.group7').fadeIn(1000); 
 			 $('.group9').fadeIn(1000); 
-			 $('.group10').fadeIn(1000); 
 		} break;
 		case 'desk' : {
-			 $('.group9').fadeIn(1000); 
-			 $('.group10').hide(); 
+			 $('.group7').fadeIn(1000); 
+			 $('.group9').hide(); 
 		} break;
 		case 'port' : {
-			 $('.group10').fadeIn(1000); 
-			 $('.group9').hide(); 
+			 $('.group9').fadeIn(1000); 
+			 $('.group7').hide(); 
 		} break;
 	}
 }
+
+
+// NAV BAR
+
+
+function carregaZona(zona){
+
+	switch(zona){
+		case 'latest' : { 
+			$.post('latestSection.php',  function(data){
+				$('.frame2').html(data);
+				$('.nav').removeClass('active');
+				$('#nav2').addClass('active');
+			});
+
+		} break;
+
+		case 'bestseller' : { 
+			$.post('bestsellerSection.php',  function(data){
+				$('.frame2').html(data);
+				$('.nav').removeClass('active');
+				$('#nav3').addClass('active');
+
+			});
+
+		}break;
+
+		case 'systems' : { 
+			$.post('systemSection.php',  function(data){
+				$('.frame2').html(data);
+				$('.nav').removeClass('active');
+				$('#nav4').addClass('active');
+			});
+
+		}break;
+
+		case 'games' : { 
+			$.post('gameSection.php',  function(data){
+				$('.frame2').html(data);
+				$('.nav').removeClass('active');
+				$('#nav1').addClass('active');
+
+			});
+
+		}break;
+		case 'search' : { 
+		 	if ($('.mobileSearch').is(":visible")) {
+		 		 termo = $('.search-item2').val();
+		 	} else{
+		 		 termo = $('.search-item').val();
+		 	}
+
+			$.post('searchSection.php', {valor : termo }, function(data){
+				$('.frame2').html(data);
+				$('.nav').removeClass('active');
+				$('#nav1').addClass('active');
+			});	
+
+		}break;
+	} 
+
+}
+
+
+function addCart(id) {
+	var productId = id;
+    $.post('cartFunction.php',{value: productId},function(data) {
+    	$('.cart span').html(data);
+
+    });
+ }
+
+
+function loginAlert(){
+ 	$('.loginWindow').fadeIn(1000);
+}
+
+function shuffle() {
+
+    $.post('shuffleImages.php',function(data) {
+    	$('.destaqueLayout').html(data);
+
+    });
+ }
+
+
+
+
+
 

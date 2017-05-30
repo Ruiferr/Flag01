@@ -142,7 +142,7 @@ header a{
 	width: 30%;
 	min-height: 45px;
 	float: left;
-	
+
 }
 
 .search input{
@@ -281,15 +281,16 @@ header a{
 	float: left;
 }
 
-.steps #active{
+.active{
 	color: #00d5bc;
 	font-family: gothamBold;
 
 }
 
+
 .createAcc{
 	width: 50%;
-	min-height: 600px;
+	padding-bottom: 3%;
 	margin-left: 25%;
 	float: left;
 }
@@ -348,16 +349,10 @@ fieldset .next {
     cursor: pointer;
 }
 
-#basicForm{
+fieldset .next:active {
+    background: #129687;
 }
 
-#paymentForm{
-	display: none;
-}
-
-.lastStep{
-	display: none;
-}
 
 .createAcc .lastStep{
 	border-radius: 20px;
@@ -397,10 +392,75 @@ fieldset .next {
 	border-style: none;
 }
 
+#finish:active{
+	background: #129687;
+}
+
 button a{
 	text-decoration: none;
 	color: white;
 }
+
+/* FOOTER */
+
+footer{
+	width: 100%;
+	min-height: 200px;
+	background-color: grey;
+	float: left;
+}
+
+footer table{
+    width: 85%;
+    margin: 2% 7.5% 1% 7.5%;
+}
+
+footer a{
+	color: white;
+	text-decoration: none;
+}
+
+footer a:hover{
+	color: darkred;
+	text-decoration: none;
+}
+
+footer td{
+	color: white;
+	font-family: gotham;
+	text-align: center;
+	font-size: 12px;
+	cursor: pointer;
+	padding: 0;
+}
+
+footer td:hover{
+	color: darkred;
+}
+
+footer th{
+	color: white;
+	padding: 1%;
+	font-family: gothamBold;
+	text-align: center;
+	border-bottom: 1px solid white;
+}
+
+footer .special{
+	font-size: 30px;
+}
+
+/* NEWPROFILE */
+
+
+.newProfile{
+	display: none;
+}
+
+.newProfile .save{
+    margin-bottom: 5%;
+}
+
 
 
 

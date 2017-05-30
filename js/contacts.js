@@ -20,37 +20,25 @@ $(document).ready(function(){
 
 	// LOGIN SECTION
 
-   	var val = 0
 
    	$('.login').click(function(){
-   		if ($('.loginWindow').css('display') == 'none' && val == 0){
+
+   		userName = $('.login p').html();
+
+   		if ($('.loginWindow').css('display') == 'none' && userName == 'Login'){
  			$('.loginWindow').fadeIn(1000);
    		}else{
-   			$('.loginWindow').hide()
+   			$('.loginWindow').hide();
    		}  
 
-   		if ($('.profileWindow').css('display') == 'none' && val == 1) {
+   		if ($('.profileWindow').css('display') == 'none' && userName !== 'Login'){
   			$('.profileWindow').fadeIn(1000);
    		}else{
-   			$('.profileWindow').hide()
+   			$('.profileWindow').hide();
    		}    			
 
    	});
-
-
-   	$('#login').click(function(){
-  		$('.login p').fadeOut(1000);
-  		$('.login').append("<p>User001</p>");
-		$('.loginWindow').hide();
-		val = 1;
-   	});
-
-   	$('#logout').click(function(){
-   		$('.login p').fadeOut(1000);
-		$('.login').append("<p>User Login</p>");
-		$('.profileWindow').hide();
-		val = 0
-   	})
+   
 
 
 });

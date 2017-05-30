@@ -165,10 +165,10 @@ header a{
 
 
 .profileWindow{
-	width: 10%;
-	min-height: 50px;
-	opacity: 0.9;
-	margin: 0 0 0 80%;
+    width: 12%;
+    min-height: 50px;
+    opacity: 0.9;
+    margin: 0 0 0 77.1%;
 	font-family: gotham;
 	font-size: 15px;
 	background: black;
@@ -184,6 +184,11 @@ header a{
 .profileWindow p{
 	padding: 5% 0 3% 24%;
 	cursor: pointer;
+}
+
+.profileWindow a{
+	text-decoration: none;
+	color: white;
 }
 
 .profileWindow p:hover{
@@ -272,11 +277,6 @@ header a{
     font-size: 18px;
 }
 
-.progress ul .active{
-	font-family: gothamBold;
-	color: #4CAF50;
-
-}
 
 .fase{
     width: 2%;
@@ -289,7 +289,9 @@ header a{
     font-size: 25px;
 }
 
-.fase span{
+
+.active{
+	font-family: gothamBold;
 	color: #4CAF50;
 }
 
@@ -520,17 +522,64 @@ aside{
 
 }
 
-
-
 .line2{
 	width: 96.4%;
 	height: 1.2px;
 	background: darkred;
-	margin: 2% 1.6% 0 1.6%;
+	margin: 2% 1.6% 1% 1.6%;
 	float: left;
-
 }
 
+
+/* FOOTER */
+
+
+footer{
+	width: 100%;
+	min-height: 200px;
+	background-color: grey;
+	float: left;
+}
+
+footer table{
+    width: 85%;
+    margin: 2% 7.5% 1% 7.5%;
+}
+
+footer a{
+	color: white;
+	text-decoration: none;
+}
+
+footer a:hover{
+	color: darkred;
+	text-decoration: none;
+}
+
+footer td{
+	color: white;
+	font-family: gotham;
+	text-align: center;
+	font-size: 12px;
+	padding: 0;
+	cursor: pointer;
+}
+
+footer td:hover{
+	color: darkred;
+}
+
+footer th{
+	color: white;
+	padding: 1%;
+	font-family: gothamBold;
+	text-align: center;
+	border-bottom: 1px solid white;
+}
+
+footer .special{
+	font-size: 30px;
+}
 
 
 

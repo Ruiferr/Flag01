@@ -21,26 +21,6 @@ $(document).ready(function(){
 			$('.search').fadeIn(2000);
 		}
 	}
-
-
-	// NAV SIDE MENU MOBILE BUTTONS
-
-	$('.close').click(function(){
-		$('.gamesFrame nav').toggle("slide");
-		$(this).hide();
-		$('.game').css('width', '120%');
-		$('.gamesFrame aside').css("width", "20%");
-		$('.open').fadeIn(3000);
-	});
-
-	$('.open').click(function(){
-		$('.gamesFrame nav').toggle("slide");
-		$(this).hide();
-		$('.game').css('width', '94%');
-		$('.gamesFrame aside').css("width", "37%");
-		$('.close').fadeIn(3000);
-	});
-
 	
 
 });

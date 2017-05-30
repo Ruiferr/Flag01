@@ -185,6 +185,11 @@ header a{
 	cursor: pointer;
 }
 
+.profileWindow a{
+	text-decoration: none;
+	color: white;
+}
+
 .profileWindow p:hover{
 	background: darkred;
 	border-radius: 0 0 0 10px;
@@ -234,6 +239,11 @@ header a{
 .search p{
 	margin: 12px 0 0 0;
 	float: left;
+	width: 10%;
+}
+
+.search p a{
+	margin-left: 50%;
 }
 
 .mobileSearch{
@@ -340,8 +350,18 @@ header a{
 	float: left;
 	display: none;
 
+
 }
 
+.LoginAlert{
+	color: white; 
+	padding: 1% ; 
+	background-color: rgba(138, 0, 0, 0.61);
+}
+
+.LoginAlert a{
+	color: gold;
+}
 
 .gamesFrame ul{
 	font-family: gotham;
@@ -389,6 +409,7 @@ header a{
 }
 
 .gameLayout{
+
 	width: 80%;
 	min-height: 800px;
 	background: #eee;
@@ -470,12 +491,20 @@ header a{
     border-radius: 0 0 10px 0;
     float: left;
     cursor: pointer;
+	transition: all 0.5s linear;
+
 
 }
 
 .cartButton:hover{
     background-color: rgb(76, 175, 81);
     color: white;
+}
+
+.cartButton:active{
+	background-color: darkred;
+	color: white;
+	border: 2px solid darkred;
 }
 
 .readButton{
@@ -517,6 +546,33 @@ header a{
 
 
 
+/* SEARCH SECTION */
+
+
+.searchFrame{
+	width: 86%;
+	margin: 3% 7% 0 7%;
+	min-height: 200px;
+	float: left;
+}
+.searchResult{
+	width: 100%;
+	margin: 0 0 1% 0;
+	padding-bottom: 0;
+	float: left;
+	background: lightgrey;
+	padding: 0.5%;
+}
+
+.searchResult a{
+	width: 100%;
+    font-size: 21px;
+    float: left;
+    color: black;
+    padding: 2%;
+}
+
+
 
 
 /* LATEST SECTION */
@@ -527,15 +583,14 @@ header a{
 	margin: 3% 7% 0 7%;
 	min-height: 200px;
 	float: left;
-	display: none;
+
 }
 
 .latestFrame h2{
-	font-family: gothamBold;
+    font-family: gothamBold;
     padding: 3%;
-    margin-left: 2.5%;
-    font-size: 24px;
-    color: darkgrey;
+    font-size: 26px;
+    color: rgba(134, 0, 0, 0.7);
 
 }
 
@@ -551,15 +606,6 @@ header a{
 
 .bottomGame{
 	max-height: 300px;
-}
-
-
-.bottomGame aside{
-	display: none;
-}
-
-.bottomGame article{
-	display: none;
 }
 
 .latestGame:hover{
@@ -618,7 +664,6 @@ header a{
 	margin: 3% 0 0 7%;
 	min-height: 200px;
 	float: left;
-	display: none;
 
 }
 
@@ -678,7 +723,7 @@ header a{
 
 .topGame img{
 	width: 100%;
-	height: 150px;
+	height: 153px;
 	overflow: hidden;
 	cursor: pointer;
 }
@@ -750,7 +795,6 @@ header a{
 	margin: 3% 0 0 7%;
 	min-height: 200px;
 	float: left;
-	display: none;
 }
 
 .systemFrame aside{
@@ -894,5 +938,6 @@ footer .special{
 
 	font-size: 30px;
 }
+
 
 

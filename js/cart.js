@@ -6,83 +6,69 @@ $(document).ready(function(){
     evt.preventDefault();
 	});
 	
+	// LOADING PAGE CART FUNCTION
+
+	total = [];
+	$('.sub span').each(function(){
+		value = parseFloat($(this).html()).toFixed(2);
+		total.push(value);
+		var sum = total.reduce(add, 0);
+		function add(a, b) {
+		    return parseFloat(a) + parseFloat(b);
+		}
+		$('.subtotalProceed span').empty();
+		$('.subtotalProceed span').append(sum.toFixed(2));
+
+		if (sum.toFixed(2) > 150) {
+			   	$('.disclaimer').show();
+
+		   	} else {
+		   			$('.disclaimer').hide();
+		   		}
+	});
+
 
 	// QUANTITY CART SELECTOR
 
-	var registaValor = 0
-	$('.qty input').click(function(){
-		if ($('.xbox').css('display') != 'none') {
-			var value = parseInt($(".number").val());
-			var valueSub = parseFloat($('.sub span').html()).toFixed(2)
-			var valueSub2 = parseFloat($('.sub2 span').html()).toFixed(2)
-			var subtotal = value * valueSub
-			var subtotalProceed = parseFloat(subtotal) + parseFloat(valueSub2)
-			$('.sub span').hide();
-			$('.sub p').append("<span> "+ subtotal +" </span>");
-			$('.proceed span').hide();
-			$('.proceed .subtotalProceed').append("<span> "+ parseFloat(subtotalProceed).toFixed(2) +" </span>");
-			if (parseFloat(subtotalProceed).toFixed(2) > 150) {
-			   	$('.disclaimer').fadeIn(1000);
+	
+	$('.qty input').change(function(){
+		var quantity = $(this).val();
+		var id = parseInt($(this).attr('id'));
 
-		   	} else {
-		   			$('.disclaimer').fadeOut(1000);
-		   		}
+		$('.price span').each(function() {
+				if ($(this).attr('id') == id) {
+					var price = parseFloat($(this).html()).toFixed(2);
+					sub = parseFloat(quantity*price).toFixed(2);
+				}
+		});
 
-		} else {
-				var value = parseInt($(".number").val());
-				var valueSub = parseFloat($('.sub span').html()).toFixed(2);
-				var subtotal = value * valueSub
-				$('.sub span').hide();
-				$('.sub p').append("<span> "+ subtotal +" </span>");
-				$('.proceed span').hide();
-				$('.proceed .subtotalProceed').append("<span> "+ subtotal +" </span>");
-				if (subtotal > 150) {
-			   		$('.disclaimer').fadeIn(1000);
+		$('.sub span').each(function() {
+				if ($(this).attr('id') == id) {
+					$(this).empty();
+					$(this).append(sub);
+				}
+			});
 
-			   	} else {
-			   			$('.disclaimer').fadeOut(1000);
-			   		}
 
+		total = [];
+		$('.sub span').each(function(){
+			value = parseFloat($(this).html()).toFixed(2);
+			total.push(value);
+			var sum = total.reduce(add, 0);
+			function add(a, b) {
+			    return parseFloat(a) + parseFloat(b);
 			}
+			$('.subtotalProceed span').empty();
+			$('.subtotalProceed span').append(sum.toFixed(2));
 
-	})
-
-	$('.qty2 input').click(function(){
-		if ($('.gta').css('display') != 'none') {
-
-			var value = parseInt($(".number2").val());
-			var valueSub = parseFloat($('.sub2 span').html()).toFixed(2);
-			var valueSub1 = parseFloat($('.sub span').html()).toFixed(2);
-			var subtotal = value * valueSub
-			var subtotalProceed = parseFloat(subtotal) + parseFloat(valueSub1)
-			$('.sub2 span').hide();
-			$('.sub2 p').append("<span> "+ subtotal +" </span>");
-			$('.proceed span').hide();
-			$('.proceed .subtotalProceed').append("<span> "+ parseFloat(subtotalProceed).toFixed(2) +" </span>");
-			if (parseFloat(subtotalProceed).toFixed(2) > 150) {
-			   	$('.disclaimer').fadeIn(1000);
-
+			if (sum.toFixed(2) > 150 ){
+			   	$('.disclaimer').fadeIn(500);
 		   	} else {
-		   			$('.disclaimer').fadeOut(1000);
+		   		$('.disclaimer').fadeOut(500);
 		   		}
+		});
 
-		} else {
-				var value = parseInt($(".number2").val());
-				var valueSub = parseFloat($('.sub2 span').html()).toFixed(2);
-				var subtotal = value * valueSub
-				$('.sub2 span').hide();
-				$('.sub2 p').append("<span> "+ subtotal +" </span>");
-				$('.proceed span').hide();
-				$('.proceed .subtotalProceed').append("<span> "+ subtotal +" </span>");
-				if (subtotal > 150) {
-			   		$('.disclaimer').fadeIn(1000);
-
-			   	} else {
-			   			$('.disclaimer').fadeOut(1000);
-			   		}
-
-			}
-	})
+	});
 
 
 	// CART SELECTION
@@ -92,7 +78,7 @@ $(document).ready(function(){
 		var getId = '.' + $(this).attr('id');
 		cartNum --
 		$('.cart span').hide();
-		$('.cart p').append("<span>"+ cartNum +"</span>")
+		$('.cart p').append("<span>"+ cartNum +"</span>");
 		$('.cart p').css('color', 'yellow');
 		$('.proceed span').hide();
 		$(getId).hide();
@@ -100,46 +86,153 @@ $(document).ready(function(){
 		   	$('.disclaimer').fadeOut(1000);
 		 }
 
-	})
+	});
 
 
 	// LOGIN SECTION
 
-   	var val = 0
 
    	$('.login').click(function(){
-   		if ($('.loginWindow').css('display') == 'none' && val == 0){
+
+
+   		userName = $('.login p').html();
+
+   		if ($('.loginWindow').css('display') == 'none' && userName == 'Login'){
  			$('.loginWindow').fadeIn(1000);
    		}else{
-   			$('.loginWindow').hide()
+   			$('.loginWindow').hide();
    		}  
 
-   		if ($('.profileWindow').css('display') == 'none' && val == 1) {
+   		if ($('.profileWindow').css('display') == 'none' && userName !== 'Login'){
   			$('.profileWindow').fadeIn(1000);
    		}else{
-   			$('.profileWindow').hide()
+   			$('.profileWindow').hide();
    		}    			
 
    	});
 
+   	// PROCEED BUTTON 
 
-   	$('#login').click(function(){
-  		$('.login p').fadeOut(1000);
-  		$('.login').append("<p>User001</p>");
-		$('.loginWindow').hide();
-		val = 1;
+   	$('.proceed button').click(function(){
+
+   		switch($('.progress .active').html()){
+   			case 'Basket' : { 
+   				carregaZona('cart');
+			}break;   			
+			case 'Details' : { 
+   				carregaZona('detail');
+			}break;
+			case 'Delivery' : { 
+   				carregaZona('delivery');
+			}break;
+			case 'Payment' : { 
+   				carregaZona('payment');
+			}break;
+			case 'Done!' : { 
+   				window.location.href = "index.php";
+			}break;
+   		}
+
    	});
-
-   	$('#logout').click(function(){
-   		$('.login p').fadeOut(1000);
-		$('.login').append("<p>User Login</p>");
-		$('.profileWindow').hide();
-		val = 0
-   	})
-
-	
+     
 
 });
+
+
+function carregaZona(zona){
+
+	qty = [];
+	$('.qty input').each(function(){ 
+		value = $(this).val();
+		qty.push(value);
+	});
+
+	var total = $('.subtotalProceed span').html();
+
+	var qtyJson = JSON.stringify(qty);
+
+
+	switch(zona){
+		case 'cart' : { 
+			$.post('cartDetails.php',{amount : qtyJson, cost: total }, function(data){
+				$('.productContent').html(data);
+				//active secion
+				$('.progress li').removeClass('active');
+				$('.fase').removeClass('active');
+				$('.progress li:nth-child(2)').addClass('active');
+				$('.progress div:nth-child(3)').addClass('active');
+				//remove some info
+				$('.promoCode').remove();
+				$('.rewardPoints').remove();
+			});
+
+		} break;
+
+		case 'detail' : { 
+			$.post('cartDelivery.php',{cost: total },  function(data){
+				$('.productContent').html(data);
+				deliveryCheck();
+				//active secion
+				$('.progress li').removeClass('active');
+				$('.fase').removeClass('active');
+				$('.progress li:nth-child(3)').addClass('active');
+				$('.progress div:nth-child(4)').addClass('active');				
+			});
+
+		}break;
+
+		case 'delivery' : { 
+			$.post('cartPayment.php',  function(data){
+				$('.productContent').html(data);
+				//active secion
+				$('.progress li').removeClass('active');
+				$('.fase').removeClass('active');
+				$('.progress li:nth-child(4)').addClass('active');
+				$('.progress div:nth-child(5)').addClass('active');	
+			});
+
+		}break;
+
+		case 'payment' : { 
+			$.post('cartDone.php',  function(data){
+				$('.productContent').html(data);
+				$('.proceed table').empty();
+				$('.proceed button').empty();
+				$('.proceed button').append('RETURN TO STORE');
+
+				//active secion
+				$('.progress li').removeClass('active');
+				$('.fase').removeClass('active');
+				$('.progress li:nth-child(5)').addClass('active');
+				$('.progress div:nth-child(6)').addClass('active');
+			});
+
+		}break;
+	} 
+
+}
+
+
+
+function deliveryCheck(){
+
+
+	if ($('.subtotalProceed span').html() > 150) {
+			$('.deliveryCheck').append('0 €');
+		} else{
+			$('.deliveryCheck').append('40 €');
+			value = parseFloat($('.subtotalProceed span').html());
+			$('.subtotalProceed span').empty();
+			$('.subtotalProceed span').append((value + 40).toFixed(2));
+
+	}
+}
+
+
+
+
+
+
 
 
 
